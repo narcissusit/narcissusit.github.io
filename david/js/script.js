@@ -9,6 +9,12 @@ $(document).ready(function(){
 		$(this).toggleClass('show');
 		$('body').toggleClass('scroll');
 	});
+	$(".main_menu").on("click","a", function (event) {
+		event.preventDefault();
+		var id  = $(this).attr('href'),
+		top = $(id).offset().top - 30;
+		$('body,html').animate({scrollTop: top}, 1000);
+	});
 	$('.slider').owlCarousel({
 		items: 1,
 		loop: true,

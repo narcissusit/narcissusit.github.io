@@ -36,7 +36,8 @@ header {
   position: fixed;
   z-index: 3;
   background-color: #fff;
-  width: 100%; }
+  width: 100%;
+  box-shadow: 0 0 1px #363636; }
   header .wrapper {
     display: flex;
     justify-content: space-between;
@@ -532,23 +533,55 @@ main {
 
 .when {
   list-style-type: none;
-  color: #363636; }
+  color: #363636;
+  position: relative;
+  padding: 20px 0; }
+  .when:before {
+    content: '';
+    background-color: #63b945;
+    width: 2px;
+    height: 100%;
+    content: '';
+    display: flex;
+    position: absolute;
+    left: 27px;
+    top: -10px; }
   .when li {
     font-family: "Fregat bold", sans-serif;
     font-size: 19px;
-    margin-bottom: 30px; }
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-left: 64px;
+    color: #666666; }
     .when li:before {
       color: #63b945;
+      height: 2px;
       font-family: "Fregat bold", sans-serif;
-      font-size: 20px; }
+      font-size: 30px;
+      width: 54px;
+      height: 54px;
+      border: 2px solid #63b945;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: -64px;
+      background-color: #ccffcc;
+      z-index: 2; }
     .when li:first-child:before {
       content: '1'; }
     .when li:nth-child(2):before {
       content: '2'; }
     .when li:last-child:before {
       content: '3'; }
-    .when li span {
+    .when li .when_title {
+      width: calc(100% - 54px);
+      margin-left: 20px; }
+    .when li .when_info {
       margin-top: 10px;
+      display: block;
       font-family: "PT Sans", sans-serif;
       font-size: 16px; }
 
@@ -625,9 +658,18 @@ main {
       padding-top: 40%; }
   .when {
     display: flex; }
+    .when:before {
+      height: 2px;
+      width: 100%;
+      top: 75%;
+      left: 0; }
     .when li {
       margin: 40px 20px;
-      width: 33.33333%; } }
+      width: 33.33333%;
+      flex-direction: column-reverse;
+      justify-content: space-between; }
+      .when li:before {
+        margin-top: 30px; } }
 
 @media (min-width: 1200px) {
   .mob_menu {
