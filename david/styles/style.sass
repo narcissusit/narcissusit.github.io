@@ -1,0 +1,702 @@
+$font_FB: "Fregat bold", sans-serif
+$font_FBI: "Fregat bold italic", sans-serif
+$font_FI: "Fregat italic", sans-serif
+$font_FR: "Fregat regular", sans-serif
+$font_PTS: "PT Sans", sans-serif
+$font_color: #363636
+$main_color: #63b945
+
+@font-face
+	font-family: "Fregat bold"
+	src: url('../fonts/Fregat_bold.otf')
+
+@font-face
+	font-family: "Fregat bold italic"
+	src: url('../fonts/Fregat_bold_italic.otf')
+
+@font-face
+	font-family: "Fregat italic"
+	src: url('../fonts/Fregat_italic.otf')
+
+@font-face
+	font-family: "Fregat regular"
+	src: url('../fonts/Fregat_regular.otf')
+
+*
+	box-sizing: border-box
+	margin: 0
+	padding: 0
+
+body
+	min-width: 320px
+
+.scroll
+	height: 100%
+	overflow: hidden
+
+.wrapper
+	max-width: 1230px
+	margin: auto
+	padding: 0 15px
+
+header
+	padding: 20px 0
+	position: fixed
+	z-index: 3
+	background-color: #fff
+	width: 100%
+	.wrapper	
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+.logo
+	font:
+		family: $font_FB
+		size: 45px
+	text-transform: uppercase
+	text-decoration: none
+	color: $font_color
+	display: inline-block
+	z-index: 5
+
+.main_menu
+	position: fixed
+	top: 0
+	bottom: 0
+	right: -100vw
+	z-index: 1
+	width: 100vw
+	height: 100vh
+	background-color: rgba(255,255,255,0.95)
+	transition: .5s ease-in-out
+
+.show
+	right: 0
+	transition: .5s ease-in-out
+
+.main_menu_list
+	list-style: none
+	margin: 130px 28px 0
+	li
+		margin: 30px 0
+		a
+			color: $font_color
+			text-decoration: none
+			display: block
+			text-align: center
+			font:
+				size: 14px
+				family: $font_FR
+			text-transform: uppercase
+			&:hover
+				color: $main_color
+
+		&:not(:last-child):after
+			content: '.'
+			font:
+				size: 22px
+				family: $font_FB
+			color: #363636
+			position: relative
+			left: 50%
+			top: 10px
+.mob_menu
+	display: inline-block
+	width: 26px
+	height: 18px
+	position: relative
+	top: 0
+	z-index: 2
+	transform: rotate(0deg)
+	transition: .5s ease-in-out
+	cursor: pointer
+	span
+		display: block
+		position: absolute
+		height: 2px
+		background: #000
+		opacity: 1
+		left: 0
+		transform: rotate(0deg)
+		transition: .25s ease-in-out
+		&:first-child
+			top: 0px
+			width: 26px
+		&:nth-child(2), &:nth-child(3)
+			top: 8px
+			width: 16px
+		&:last-child
+			top: 16px
+			width: 25px
+	&:hover span
+		width: 100%
+	&.open
+		span
+			&:first-child
+				top: 18px
+				width: 0%
+				left: 50%
+			&:nth-child(2)
+				width: 100%
+				transform: rotate(45deg)
+			&:nth-child(3)
+				width: 100%
+				transform: rotate(-45deg)
+			&:last-child
+				top: 18px
+				width: 0%
+				left: 50%
+
+main
+	top: 86px
+	position: relative
+
+.back_health
+	background-image: url('../images/back.png')
+	background-position: center center
+	background-repeat: no-repeat
+	background-size: cover
+	width: 100%
+	.wrapper
+		padding: 100px 25px
+		background-color: rgba(215, 238, 214, 0.7)
+	h2
+		font:
+			family: $font_FB
+			size: 28px
+		color: $main_color
+		text-transform: uppercase
+		max-width: 540px
+		margin-bottom: 35px
+	.back_health_text
+		font:
+			size: 19px
+			family: $font_PTS
+		margin-bottom: 32px
+		max-width: 500px
+		line-height: 25px
+
+.back_buttons
+	margin: 85px 10px 0
+	text-align: center
+	.btn_app
+		width: 179px
+	.btn_more
+		width: 257px
+
+.button
+	outline: none
+	border: none
+	width: 100%
+	text-transform: uppercase
+	font:
+		family: $font_PTS
+		size: 14.63px
+		weight: 700
+	height: 48px
+	border-radius: 4px
+	margin: 10px 0
+	cursor: pointer
+
+.btn_app
+	background-color: $main_color
+	color: #fff
+	transition: all .5s ease-in-all
+	&:hover
+		background-color: #237905
+
+.btn_more
+	background-color: transparent
+	color: $main_color
+	border: 3px solid $main_color
+	&:hover
+		border-color: #237905
+		color: #237905
+
+.programm_for
+	background-color: $main_color
+	.wrapper
+		padding: 40px 25px
+	h3
+		color: #fff
+		text-transform: uppercase
+		font:
+			family: $font_FB
+			size: 20px
+		margin: 10px 0
+		text-align: center
+		line-height: 25px
+
+.types_of_people
+	color: #fff
+	list-style-type: none
+	font:
+		family: $font_PTS
+		size: 16px
+	li 	
+		margin-bottom: 7px
+		&:before
+			content: '>'
+			color: #fff
+			font:
+				size: 16px
+				family: $font_PTS
+				weight: 700
+			margin-right: 5px
+
+.constituents
+	padding: 63px 15px
+	h2
+		margin-bottom: 35px
+
+.section_title
+	color: $main_color
+	text-transform: uppercase
+	text-align: center
+	font: 
+		size: 32px
+		family: $font_FB 
+
+.const_desc
+	font:
+		family: $font_PTS
+		size: 19px
+	color: $font_color
+	text-align: center
+	line-height: 25px
+	margin-bottom: 30px
+
+.slider
+	position: relative
+	.slider-item
+		margin: 0 auto
+		height: auto
+		overflow: hidden
+		max-width: 968px
+	.owl-dots
+		position: absolute
+		bottom: 46px
+		left: 0
+		right: 0
+		z-index: 5
+		display: flex
+		flex-direction: row
+		justify-content: center
+	.owl-dot
+		margin: 0 5px
+		span
+			display: block
+			width: 16px
+			height: 16px
+			border-radius: 50%
+			border: 1px solid #fff
+	.owl-dot.active 
+		span
+			background-color: #fff
+
+.const_list
+	list-style-type: none
+	margin: 45px auto
+	padding: 0 20px
+	max-width: 968px
+	li
+		color: $font_color
+		font:
+			family: $font_PTS
+			size: 15px
+		line-height: 25px
+		margin-bottom: 15px
+		&:before
+			content: ''
+			background-image: url('../images/sprite.png')
+			display: inline-block
+			background-repeat: no-repeat
+			width: 19px
+			height: 16px
+			margin-left: -20px
+
+.const_post
+	color: #a2a2a2
+	font: 
+		family: $font_PTS
+		size: 15px
+	text-align: center
+	max-width: 960px
+	margin: auto
+
+.call
+	background-color: #ddffcc
+	padding: 55px 0
+	h3
+		color: #707070
+		font: 
+			family: $font_FB
+			size: 24px
+		text-transform: uppercase
+		text-align: center
+		margin-bottom: 16px
+
+.call_desc
+	font:
+		size: 17px
+		family: $font_PTS
+	color: #a2a2a2
+	text-align: center
+	margin-bottom: 40px
+
+.adresses
+	text-align: center
+	color: #656565
+	font-family: $font_PTS
+	.place
+		margin: 15px 0
+		.city
+			font-size: 20px
+		.location, .tel
+			font-size: 16px
+		.tel
+			text-decoration: none
+			color: #656565
+
+.btn_block
+		text-align: center
+		margin-top: 40px
+	
+.btn_write
+	width: 270px
+	height: 43px
+	color: #656565
+	border: 1px solid #656565
+
+.why
+	background-image: url('../images/back2.jpg')
+	background-position: center center
+	background-repeat: no-repeat
+	background-size: cover
+	width: 100%
+
+.inner_why
+	background-color: rgba(0, 0, 0, 0.74)
+	width: 100%
+	height: 100%
+	padding: 80px 0
+	h2
+		color: #66cc00
+		margin-bottom: 55px
+
+.why_info, .why_desc
+	color: #fff
+	font:
+		family: $font_PTS
+		size: 16px
+	text-align: center
+
+.why_info
+	text-transform: uppercase
+	font-weight: 700
+	margin-bottom: 20px
+
+.why_desc
+	margin-bottom: 90px
+
+.hours
+	position: relative
+	svg
+		margin: auto
+		display: block
+	&:before
+		content: ''
+		background-image: url('../images/sprite.png')
+		display: block
+		margin: 0 auto -20px
+
+.work:before
+	background-position: -29px 0
+	width: 32px
+	height: 28px
+
+.TV:before
+	background-position: -70px 0
+	width: 34px
+	height: 29px
+
+.computer:before
+	background-position: -114px 0
+	width: 30px
+	height: 22px	
+
+.eat:before
+	background-position: 0px -39px
+	width: 28px
+	height: 28px	
+		
+.transport:before
+	background-position: -38px -39px
+	width: 31px
+	height: 29px	
+
+.time_amount
+	position: absolute
+	color: #4cb027
+	text-align: center
+	font: 
+		family: $font_PTS
+		size: 50px
+		weight: 700
+	top: 20%
+	left: 0
+	right: 0
+	margin: auto
+
+.time_text
+	position: absolute
+	color: #4cb027
+	text-align: center
+	font: 
+		family: $font_PTS
+		size: 17px
+	bottom: 25%
+	left: 0
+	right: 0
+	margin: auto
+
+.time_desc
+	font:
+		family: $font_PTS
+		size: 22px
+		weight: 700
+	color: #428d26
+	margin: 20px auto 55px
+	max-width: 164px
+	text-align: center
+
+.time_info
+	text-transform: uppercase
+	color: #63b945
+	font:
+		family: $font_FB
+		size: 24px
+	text-align: center
+	margin-bottom: 75px
+	span
+		font-size: 48px
+
+.sit_info, .sit_desc
+	color: #fff
+	text-align: center
+	font-family: $font_PTS
+		
+.sit_info
+	text-transform: uppercase
+	font: 
+		size: 16px
+		weight: 700px
+	margin-bottom: 20px
+
+.sit_desc
+	font-size: 15px
+	line-height: 25px
+	max-width: 755px
+	margin: auto
+
+.happening
+	padding: 100px 0
+
+.pain_text
+	position: relative
+
+.pain_number
+	position: absolute
+	top: 0
+	left: 0
+	font:
+		family: $font_FB
+		size: 200px
+	color: #bff6a3
+	z-index: 1
+
+.pain_title
+	position: relative
+	color: #666666
+	z-index: 2
+	font: 
+		family: $font_PTS
+		size: 30px
+	padding-top: 100px
+	padding-bottom: 30px
+
+.pain_info, .pain_more
+	color: #666666
+	font: 
+		family: $font_PTS
+		size: 16px
+	display: inline
+
+.pain_more
+	text-decoration: none
+	font-weight: 700
+
+.pain_image
+	width: 100%
+	padding-top: 100%
+	height: 0
+	overflow: hidden
+	position: relative
+	margin: 60px 0
+	img
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		margin: auto
+		height: 100%
+		width: auto
+		overflow: auto
+
+.happ:last-child
+	.pain_image
+		img
+			width: 100%
+			height: auto
+
+.steps
+	padding: 80px 0
+	background-color: #ccffcc
+	.section_title
+		margin-bottom: 40px
+
+.when
+	list-style-type: none
+	color: $font_color
+	li
+		font:
+			family: $font_FB
+			size: 19px
+		margin-bottom: 30px
+		&:before
+			color: #63b945
+			font:
+				family: $font_FB
+				size: 20px
+		&:first-child:before
+			content: '1'
+		&:nth-child(2):before
+			content: '2'
+		&:last-child:before
+			content: '3'
+
+		span
+			margin-top: 10px
+			font:
+				family: $font_PTS
+				size: 16px
+
+
+@media(min-width: 580px)
+	.back_buttons
+		.btn_app
+			margin-right: 35px
+
+@media (min-width: 820px)
+	.back_health
+		.wrapper
+			background-color: transparent
+	.back_buttons
+		display: flex
+		justify-content: flex-start
+	.slider-item
+		position: relative
+		width: 80%
+	.owl-prev, .owl-next
+		position: absolute
+		top: 0
+		bottom: 0
+		width: 64px
+		height: 64px
+		border-radius: 50%
+		border: 2px solid $main_color
+		margin: auto
+		svg
+			position: absolute
+			top: 0
+			right: 0
+			left: 0
+			bottom: 0
+			margin: auto
+	.owl-prev
+		left: 0
+		svg
+			right: 10%
+	.owl-next
+		right: 0
+		svg
+			left: 10%
+	.const_list
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		li 	
+			width: 47%
+	.adresses
+		margin: 0 auto
+		max-width: 750px
+		display: flex
+		justify-content: space-between
+
+
+@media (min-width: 960px)
+	.programm_for
+		.wrapper
+			display: flex
+			judstify-content: space-between
+			align-items: center
+		h3
+			margin-right: 70px
+
+	.times
+		display: flex
+		justify-content: space-around
+
+	.happ
+		display: flex
+		flex-wrap: wrap
+		&:nth-child(2n + 1)
+			flex-direction: row-reverse
+		.pain_text
+			width: calc(60% - 120px)
+			top: 30px
+			margin: 0 60px
+		.pain_image
+			width: 40%
+			padding-top: 40%
+
+	.when
+		display: flex
+		li
+			margin: 40px 20px 
+			width: 33.33333%
+
+@media (min-width: 1200px)
+	.mob_menu
+		display: none
+	.main_menu
+		position: static
+		height: auto
+		width: auto
+		margin: 0
+	.main_menu_list
+		display: flex
+		margin: 0
+		li 
+			margin: 10px 0 0
+			display: flex
+			&:not(:last-child):after
+				bottom: 45%
+				left: 0
+				top: auto
+				padding: 0 5px
+
+
+
