@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>Shophia</title>
+	<link rel="stylesheet" href="styles/style.css">
+
+</head>
+<body>
+	<header>
+		<div class="user_panel">
+			<div class="wrapper">
+				<a href="tel:+001555801" class="call">
+					<i class="fa fa-phone"></i>
+					Call +001 555 801
+				</a>
+				<nav class="user_menu">
+					<ul class="cabinet_menu">
+						<li><a href="#">Welcome MSG!</a></li>
+						<li><a href="#">My account</a></li>
+						<li><a href="#">My whistlist</a></li>
+						<li><a href="#" id="login">Login</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<div class="menu_panel">
+			<div class="wrapper">
+				<div class="menu_icon">
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+				<nav class="main_menu">
+					<ul class="main_menu_list">
+						<li><a href="#">Home</a></li>
+						<li><a href="#">Gallery</a></li>
+						<li><a href="#">Categories</a></li>
+						<li><a href="#">Pages</a></li>
+					</ul>
+				</nav>
+				<span class="logo">Shophia</span>
+				<div class="social_panel">
+					<div class="social_networks">
+						<a href="#" class="fa fa-facebook"></a>
+						<a href="#" class="fa fa-twitter"></a>
+						<a href="#" class="fa fa-pinterest"></a>
+						<a href="#" class="fa fa-instagram"></a>
+					</div>
+					<select name="language" class="lang">
+						<option value="eng"><a href="#">English</a></option>
+						<option value="spa"><a href="#">Spanish</a></option>
+						<option value="fre"><a href="#">French</a></option>
+						<option value="ita"><a href="#">Italian</a></option>
+					</select>
+				</div>
+			</div>
+		</div>
+	</header>
+	<main id="page">
+		<section class="slider">
+			<div class="slide slide1">
+				<img src="images/slide-1.jpg" alt="Clother" class="slide_image">
+				<div class="slide_content">
+					<div class="slide_sale">
+						<div class="slide_text">
+							<h4>Mid-Season</h4>
+							<h2>Sale</h2>
+							<div class="up">
+								<div class="up_line up_right">
+									<span></span>
+									<span></span>
+								</div>
+								<p>Up to</p>
+								<div class="up_line">
+									<span></span>
+									<span></span>
+								</div>
+							</div>
+							<h3>50% Off</h3>
+						</div>
+					</div>
+				</div>
+				<button class="shop_now">
+					Shop now
+				</button>
+			</div>
+			<div class="slide slide2">
+				<img src="images/slide-2.jpg" alt="Clother" class="slide_image">
+				<div class="slide_content">
+					<div class="slide_sale">
+						<div class="slide_text">
+							<h4>Mid-Season</h4>
+							<h2>Sale</h2>
+							<div class="up">
+								<div class="up_line up_right">
+									<span></span>
+									<span></span>
+								</div>
+								<p>Up to</p>
+								<div class="up_line">
+									<span></span>
+									<span></span>
+								</div>
+							</div>
+							<h3>50% Off</h3>
+						</div>
+					</div>
+				</div>
+				<button class="shop_now">
+					Shop now
+				</button>
+			</div>
+			<div class="slide slide3">
+				<img src="images/slide-3.jpg" alt="Clother" class="slide_image">
+				<div class="slide_content">
+					<div class="slide_sale">
+						<div class="slide_text">
+							<h4>Mid-Season</h4>
+							<h2>Sale</h2>
+							<div class="up">
+								<div class="up_line up_right">
+									<span></span>
+									<span></span>
+								</div>
+								<p>Up to</p>
+								<div class="up_line">
+									<span></span>
+									<span></span>
+								</div>
+							</div>
+							<h3>50% Off</h3>
+						</div>
+					</div>
+				</div>
+				<button class="shop_now">
+					Shop now
+				</button>
+			</div>
+			<div class="slide_labels">
+				<a class="active dot-1 dot" onclick="currentSlide(1)"></a>
+				<a class="dot-2 dot" onclick="currentSlide(2)"></a>
+				<a class="dot-3 dot" onclick="currentSlide(3)"></a>
+			</div>
+			<div class="slide_arrows">
+				<a class="fa fa-angle-left fa-5x prev" onclick="plusSlides(-1)"></a>
+				<a class="fa fa-angle-right fa-5x next" onclick="plusSlides(1)"></a>
+			</div>
+		</section>
+		<section class="conditions">
+			<div class="wrapper">
+				<div class="free_ship">
+					<div class="ship_content">
+						<p class="fa fa-plane fa-3x"></p>
+						<div class="text_block">
+							<h3>Free Shipping</h3>
+							<p>In Order Min $200</p>
+						</div>
+					</div>
+				</div>
+				<div class="return">
+					<div class="ship_content">
+						<p class="fa fa-clock-o fa-3x"></p>
+						<div class="text_block">
+							<h3>30-Days Returns</h3>
+							<p>Money Back  Guarantee</p>
+						</div>
+					</div>
+				</div>
+				<div class="support">
+					<div class="ship_content">
+						<p class="fa fa-life-ring fa-3x"></p>
+						<div class="text_block">
+							<h3>24/7 Support</h3>
+							<p>Lifestyme Support</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="collection">
+			<div class="wrapper">
+				<div class="collect_title">
+					<h2>Summer Collection</h2>
+				</div>
+				<div class="collect_sale">
+					<div class="collect_item">
+						<img src="images/shop-1.jpg" alt="Shop">
+						<div class="sale">
+							<p>20</p>
+							<p>%</p>
+						</div>
+						<div class="add_to_cart">
+							<p>+ Add to cart</p>
+						</div>
+						<button class="like fa fa-heart-o fa-4x"></button>
+					</div>
+					<div class="collect_item">
+						<img src="images/shop-2.jpg" alt="Shop">
+						<div class="add_to_cart">
+							<p>+ Add to cart</p>
+						</div>
+						<button class="like fa fa-heart-o fa-4x"></button>
+					</div>
+					<div class="collect_item">
+						<img src="images/shop-3.jpg" alt="Shop">
+						<div class="add_to_cart">
+							<p>+ Add to cart</p>
+						</div>
+						<button class="like fa fa-heart-o fa-4x"></button>
+					</div>
+					<div class="collect_item">
+						<img src="images/shop-4.jpg" alt="Shop">
+						<div class="sale">
+							<p>40</p>
+							<p>%</p>
+						</div>
+						<div class="add_to_cart">
+							<p>+ Add to cart</p>
+						</div>
+						<button class="like fa fa-heart-o fa-4x"></button>
+					</div>
+					<div class="collect_item">
+						<img src="images/shop-5.jpg" alt="Shop">
+						<div class="sale">
+							<p>20</p>
+							<p>%</p>
+						</div>
+						<div class="add_to_cart">
+							<p>+ Add to cart</p>
+						</div>
+						<button class="like fa fa-heart-o fa-4x"></button>
+					</div>
+					<div class="collect_item">
+						<img src="images/shop-6.jpg" alt="Shop">
+						<div class="add_to_cart">
+							<p>+ Add to cart</p>
+						</div>
+						<button class="like fa fa-heart-o fa-4x"></button>
+					</div>
+					<div class="collect_item">
+						<img src="images/shop-7.jpg" alt="Shop">
+						<div class="add_to_cart">
+							<p>+ Add to cart</p>
+						</div>
+						<button class="like fa fa-heart-o fa-4x"></button>
+					</div>
+					<div class="collect_item">
+						<img src="images/shop-8.jpg" alt="Shop">
+						<div class="sale">
+							<p>40</p>
+							<p>%</p>
+						</div>
+						<div class="add_to_cart">
+							<p>+ Add to cart</p>
+						</div>
+						<button class="like fa fa-heart-o fa-4x"></button>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer>
+		<div class="wrapper">
+			<div class="main_footer_info">
+				<div class="shops footer_content">
+					<h3><a href="#">Shops</a></h3>
+					<div class="content_foot">
+						<ul>
+							<li><a href="#">New In</a></li>
+							<li><a href="#">Women</a></li>
+							<li><a href="#">Men</a></li>
+							<li><a href="#">Shoes</a></li>
+							<li><a href="#">Bags & Accessories</a></li>
+							<li><a href="#">Top Brands</a></li>
+							<li><a href="#">Sale & Special Offers</a></li>
+							<li><a href="#">Lookbook</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="information footer_content">
+					<h3><a href="#">Information</a></h3>
+					<div class="content_foot">
+						<ul>
+							<li><a href="#">About us</a></li>
+							<li><a href="#">Customer Service</a></li>
+							<li><a href="#">New Collection</a></li>
+							<li><a href="#">Best Sellers</a></li>
+							<li><a href="#">Manufacturers</a></li>
+							<li><a href="#">Privacy policy</a></li>
+							<li><a href="#">Terms & condition</a></li>
+							<li><a href="#">Blog</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="customer footer_content">
+					<h3><a href="#">Customer Service</a></h3>
+					<div class="content_foot">
+						<ul>
+							<li><a href="#">Search Terms</a></li>
+							<li><a href="#">Advanced Search</a></li>
+							<li><a href="#">Orders and Returns</a></li>
+							<li><a href="#">Contact Us</a></li>
+							<li><a href="#">RSS</a></li>
+							<li><a href="#">Help & FAQs</a></li>
+							<li><a href="#">Consultant</a></li>
+							<li><a href="#">Store Locations</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="connect footer_content">
+					<h3><a href="#">Stay Connected</a></h3>
+					<div class="connect_foot">
+						<div class="networks_foot">
+							<a href="#" class="fa fa-facebook fa-lg"></a>
+							<a href="#" class="fa fa-twitter fa-lg"></a>
+							<a href="#" class="fa fa-instagram fa-lg"></a>
+							<a href="#" class="fa fa-pinterest fa-lg"></a>
+							<a href="#" class="fa fa-rss fa-lg"></a>
+						</div>
+					</div>
+					<h3 class="subscribe_title"><a href="#">Subscribe <span>in</span> Our News Letter</a></h3>
+					<form class="mail_form">
+						<input type="mail" class="mail" placeholder="Enter Your Email Address" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
+						<button class="subscribe">Subscribe</button>
+					</form>
+				</div>
+			</div>
+			<div class="footer_rights">
+				<p>	&copy; 2015 Shopia Fashion Store Shopify</p>
+				<p>All Rights Reserved. Ecommerce Software by Shopify.</p>
+				<p>Designed by <a href="#">MoccaLabs.com</a></p>
+				<div class="partners">
+					<a href="#" class="fa fa-cc-visa"></a>
+					<a href="#" class="fa fa-cc-mastercard"></a>
+					<a href="#" class="fa fa-cc-amex"></a>
+					<a href="#" class="fa fa-cc-discover"></a>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<section class="modal_form" id="modal">
+		<div class="modal_window">
+			<h2 class="title_modal">Sign In</h2>
+			<form class="sign">
+				<input type="text" class="name" required placeholder="username">
+				<input type="password" class="password" required placeholder="password"> 
+				<div class="modal_check">
+					<div class="check_block">
+						<input id="keep" type="checkbox" class="keep_check" checked>
+						<label for="keep" class="keep">
+							Keep me signed in
+						</label>
+					</div>
+					<button class="sign_button">Sign in</button>
+				</div>
+			</form>
+		</div>
+	</section>
+
+	<div class="to_top">
+		<a href="#" class="fa fa-angle-up fa-3x"></a>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>
