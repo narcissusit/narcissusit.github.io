@@ -1,0 +1,240 @@
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background-image: url('../images/background.jpg');
+	background-size: contain;
+	height: 100vh;
+	width: 100vw;
+	overflow: hidden;
+	font-family: 'Roboto', sans-serif;
+}
+
+.first_slide{
+	background-image: url('../images/back_town.png');
+	background-size: contain;
+	height: 100vh;
+	width: 100vw;
+	background-repeat: no-repeat;
+	background-position-y: 10%;
+	overflow: hidden;
+}
+
+.page_title{
+	background-color: #7993b8;
+	position: absolute;
+	left: 33.33%;
+	top: 5%;
+	width: 66.67%;
+	padding: 40px;
+	color: #fff;
+	font-size: 14px;
+	text-transform: uppercase;
+}
+
+.car img{
+	width: 25%;
+	height: auto;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+
+.bag_place img{
+	position: absolute;
+	top: 5%;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: 7%;
+}
+
+.bag_place:first-child img{
+	right: 9%;
+}
+
+.bag_place:nth-child(2) img{
+	width: 5%;
+	top: 7%;
+}
+
+.bag_place:last-child img{
+	left: 9%;
+}
+
+.bags, .bags_places{
+	position: absolute;
+	top: 80%;
+	margin: auto;
+	left: 0;
+	right: 0;
+	display: flex;
+	justify-content: center;
+	z-index: 100;
+}
+
+.bags_places{
+	top: 45%;
+}
+
+.bag_place{
+	margin: 0 -10px;
+}
+
+.bag{
+	margin: 0 20px;
+}
+
+.bag:first-child, .bag:last-child, .bag_place:first-child, .bag_place:last-child{
+	width: 7%;
+	height: 7%;
+}
+
+.bag:nth-child(2), .bag_place:nth-child(2){
+	width: 5%;
+	height: 5%;
+	margin-top: 20px;
+}
+
+.tires {
+	display: none;
+}
+
+.tires img{
+	position: absolute;
+	top: 80%;
+	margin: auto;
+	left: 0;
+	right: 0;
+	width: 40%;
+}
+
+.second_slide{
+	height: 100vh;
+	width: 100vw;
+	background-image: url('../images/background2.jpg');
+	background-size: cover;
+	display: none;
+}
+
+.wrapper{
+	max-width: 960px;
+	margin: auto;
+	padding: 15px 0;
+}
+
+h3{
+	font-size: 25px;
+	font-family: 'Lato', sans-serif;
+	text-transform: uppercase;
+	color: #fff;
+	margin-bottom: 10px;
+	display: none;
+}
+
+.first_word_title{
+	color: #7993b8;
+}
+
+.flex{
+	margin-top: -20px;
+	display: flex;
+	flex-wrap: no-wrap;
+	align-items: center;
+}
+
+h2{
+	font-size: 80px;
+	font-family: 'Lato', sans-serif;
+	text-transform: uppercase;
+	color: #fff;
+	text-align: center;
+	display: none;
+}
+
+.capacity{
+	padding: 15px;
+	margin: 10px 0;
+	background-color: #7993b8;
+	color: #fff;
+	font-size: 20px;
+	font-family: 'Lato', 'Roboto', sans-serif;
+	text-align: center;
+	width: 100%;
+	display: none;
+}
+
+.winner{
+	display: none;
+}
+
+.winner_logo{
+	width: 70%;
+	padding-left: 20%;
+}
+
+.winner_desc{
+	font-family: 'Roboto', sans-serif;
+	font-size: 15px;
+	margin-left: 50%;
+	margin-top: -100px;
+}
+
+.volvo{
+	width: 50%;
+	display: block;
+	position: absolute;
+	top: 30%;
+	left: 0;
+	right: -200%;
+	margin: auto;
+}
+
+.test_button{
+	outline: none;
+	border: none;
+	background-color: #0085e5;
+	width: 300px;
+	height: 70px;
+	text-align: center;
+	margin: 20px auto;
+	display: block;
+	color: #fff;
+	font-family: 'Lato', sans-serif;
+	font-size: 30px;
+	text-transform: uppercase;
+	display: none;
+	position: absolute;
+	bottom: 30px;
+	left: 0;
+	right: 0;
+}
+
+.test_button:hover{
+	cursor: pointer;
+}
+
+.internet{
+	text-decoration: none;
+	color: #7993b8;
+	text-transform: uppercase;
+	font-size: 16px;
+	font-family: 'Lato', sans-serif;
+	font-weight: 900px;
+	text-align: center;
+	margin: auto;
+	position: absolute;
+	bottom: 20px;
+	left: 0;
+	right: 0;
+	width: 100%;
+	display: none;
+}
+
