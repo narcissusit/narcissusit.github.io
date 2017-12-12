@@ -5,13 +5,15 @@
 	<title></title>
 </head>
 <body>
-	
+	<h1 id="text"></h1>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
 <script>
 if (annyang) {
   // Let's define a command.
   var commands = {
-    'hello': function() { alert('Hello world!'); }
+    'hello': function() { alert('Hello world!'); },
+    'index': function() {console.log("index");},
+    'text': function() {document.getElementbyId('text').innerHTML = "text";}
   };
 
   // Add our commands to annyang
