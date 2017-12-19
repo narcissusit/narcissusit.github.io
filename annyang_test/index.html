@@ -9,16 +9,15 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
 <script>
 if (annyang) {
-	annyang.setLanguage('ru');
-  // Let's define a command.
+
   var commands = {
-    'привет *tag': function() { alert('Hello world!' + tag); },
-    "имя": function() {console.log("index");},
-    'текст': function() {document.getElementById('text').innerHTML = "text";},
-    'новый текст': function() {document.getElementById('text').innerHTML = "new text";},
-    'другой текст': function() {document.getElementById('text').innerHTML = "second text";},
-    'красный': function() {document.body.style.background = "red";},
-    'синий': function() {document.body.style.background = "blue";}
+    'hello': function() { alert('Hello world!' + tag); },
+    "name": function() {console.log("index");},
+    'text': function() {document.getElementById('text').innerHTML = "text";},
+    'new text': function() {document.getElementById('text').innerHTML = "new text";},
+    'second text': function() {document.getElementById('text').innerHTML = "second text";},
+    'red': function() {document.body.style.background = "red";},
+    'blue': function() {document.body.style.background = "blue";}
   };
 
 	annyang.addCallback('result', function(whatWasHeardArray) {
