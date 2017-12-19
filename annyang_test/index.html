@@ -22,6 +22,7 @@ if (annyang) {
 
 	annyang.addCallback('result', function(whatWasHeardArray) {
 	 document.body.style.background = whatWasHeardArray[0];
+	console.log(whatWasHeardArray[0]);
 	});
 
   // Add our commands to annyang
