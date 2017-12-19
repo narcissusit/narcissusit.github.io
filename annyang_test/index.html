@@ -9,16 +9,16 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
 <script>
 if (annyang) {
-	annyang.setLanguage('ua');
+	annyang.setLanguage('ru');
   // Let's define a command.
   var commands = {
-    'привіт': function() { alert('Hello world!'); },
-    "ім'я": function() {console.log("index");},
+    'привет *tag': function() { alert('Hello world!' + tag); },
+    "имя": function() {console.log("index");},
     'текст': function() {document.getElementById('text').innerHTML = "text";},
-    'новий текст': function() {document.getElementById('text').innerHTML = "new text";},
-    'другий текст': function() {document.getElementById('text').innerHTML = "second text";},
-    'червоний': function() {document.body.style.background = "red";},
-    'синій': function() {document.body.style.background = "blue";}
+    'новый текст': function() {document.getElementById('text').innerHTML = "new text";},
+    'другой текст': function() {document.getElementById('text').innerHTML = "second text";},
+    'красный': function() {document.body.style.background = "red";},
+    'синий': function() {document.body.style.background = "blue";}
   };
 
   // Add our commands to annyang
