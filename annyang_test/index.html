@@ -8,16 +8,17 @@
 	<h1 id="text"></h1>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
 <script>
+annyang.setLanguage('ua');
 if (annyang) {
   // Let's define a command.
   var commands = {
-    'hello': function() { alert('Hello world!'); },
-    'name': function() {console.log("index");},
-    'text': function() {document.getElementById('text').innerHTML = "text";},
-    'new text': function() {document.getElementById('text').innerHTML = "new text";},
-    'second text': function() {document.getElementById('text').innerHTML = "second text";},
-    'red background': function() {document.body.style.background = "red";},
-    'blue background': function() {document.body.style.background = "blue";}
+    'Привіт': function() { alert('Hello world!'); },
+    "Ім'я": function() {console.log("index");},
+    'текст': function() {document.getElementById('text').innerHTML = "text";},
+    'новий текст': function() {document.getElementById('text').innerHTML = "new text";},
+    'інший текст': function() {document.getElementById('text').innerHTML = "second text";},
+    'червоний колір': function() {document.body.style.background = "red";},
+    'блакитний колір': function() {document.body.style.background = "blue";}
   };
 
   // Add our commands to annyang
