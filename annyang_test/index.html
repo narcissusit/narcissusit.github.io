@@ -22,7 +22,7 @@ if (annyang) {
   };
 
 	annyang.addCallback('result', function(whatWasHeardArray) {
-	  console.log(whatWasHeardArray)
+	  document.getElementById('text').innerHTML = whatWasHeardArray[0];
 	});
 
   // Add our commands to annyang
