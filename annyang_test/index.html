@@ -21,6 +21,10 @@ if (annyang) {
     'синий': function() {document.body.style.background = "blue";}
   };
 
+	annyang.addCallback('result', function(whatWasHeardArray) {
+	  console.log(whatWasHeardArray)
+	});
+
   // Add our commands to annyang
   annyang.addCommands(commands);
 
