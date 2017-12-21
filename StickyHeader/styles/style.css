@@ -6,25 +6,17 @@ body{
 }
 
 .sticky-header{
-	height: 100vh;
+	height: 30vh;
 	background-color: red;
 	transition: height .4s ease;
-}
-
-.sticky-header-null{
-	height: 0;
 }
 
 .main-header{
 	text-align: center;
 	margin: 0;
-	line-height: 100vh;
+	line-height: 30vh;
 	font-size: 72px;
 	transition: font-size .4s ease;
-}
-
-.main-header-null{
-	font-size: 0;
 }
 
 .main-menu{
