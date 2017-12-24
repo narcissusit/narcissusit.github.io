@@ -1,0 +1,102 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0; }
+
+body {
+  background-image: url("../images/background.jpg");
+  background-size: cover;
+  background-position: center center;
+  font-family: "Montserrat", "Monotype Corsiva"; }
+
+.wrap {
+  max-width: 1170px;
+  margin: auto;
+  padding: 15px; }
+
+.sign_in {
+  background-color: rgba(4, 3, 55, 0.6);
+  height: 100vh; }
+
+.main_title {
+  color: #fff;
+  text-align: center;
+  margin-top: 50px;
+  font-size: 50px; }
+
+.custom-form {
+  font-size: 30px;
+  max-width: 1170px;
+  margin: 40px auto 40px;
+  padding: 40px;
+  border-radius: 4px;
+  outline: none; }
+
+.custom-form .form-group {
+  position: relative;
+  padding-top: 16px;
+  margin-bottom: 16px; }
+
+.custom-form .form-group .animated-label {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+  text-align: center;
+  width: 100%;
+  font-weight: 300;
+  opacity: 0.5;
+  cursor: text;
+  color: #fff;
+  transition: 0.2s ease all;
+  margin: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none; }
+
+.custom-form .form-group .animated-label:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 45%;
+  height: 2px;
+  width: 10px;
+  visibility: hidden;
+  background-color: #8e44ad;
+  transition: 0.2s ease all; }
+
+.custom-form .form-group.not-empty .animated-label {
+  top: 0;
+  font-size: 25px; }
+
+.custom-form .form-group .form-control {
+  position: relative;
+  z-index: 1;
+  border-radius: 0;
+  border-width: 0 0 1px;
+  border-bottom-color: rgba(0, 0, 0, 0.25);
+  background-color: transparent;
+  height: 120px;
+  font-size: 35px;
+  color: #fff;
+  text-align: center;
+  padding: 3px 0 5px;
+  width: 100%;
+  outline: none; }
+
+#user:focus, #pass:focus {
+  box-shadow: none;
+  border-bottom-color: rgba(0, 0, 0, 0.12); }
+
+#user:focus ~ .animated-label, #pass:focus ~ .animated-label {
+  top: 0;
+  opacity: 1;
+  color: #8e44ad;
+  font-size: 25px;
+  text-align: center; }
+
+#user:focus ~ .animated-label:after, #pass:focus ~ .animated-label:after {
+  visibility: visible;
+  width: 100%;
+  left: 0; }

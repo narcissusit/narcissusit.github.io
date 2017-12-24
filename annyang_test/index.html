@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="windows-1251">
+	<meta charset="utf-8">
 	<title></title>
 </head>
 <body>
@@ -9,17 +9,26 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
 <script>
 if (annyang) {
+<<<<<<< HEAD
 	annyang.setLanguage('ua');
   // Let's define a command.
+=======
+
+>>>>>>> 6195ae0ea25b6e234b28433be9962cbf9650ea68
   var commands = {
-    'Привіт': function() { alert('Hello world!'); },
-    "Ім'я": function() {console.log("index");},
-    'текст': function() {document.getElementById('text').innerHTML = "text";},
-    'новий текст': function() {document.getElementById('text').innerHTML = "new text";},
-    'інший текст': function() {document.getElementById('text').innerHTML = "second text";},
-    'червоний колір': function() {document.body.style.background = "red";},
-    'блакитний колір': function() {document.body.style.background = "blue";}
+    'hello': function() { alert('Hello world!' + tag); },
+    "name": function() {console.log("index");},
+    'text': function() {document.getElementById('text').innerHTML = "text";},
+    'new text': function() {document.getElementById('text').innerHTML = "new text";},
+    'second text': function() {document.getElementById('text').innerHTML = "second text";},
+    'red': function() {document.body.style.background = "red";},
+    'blue': function() {document.body.style.background = "blue";}
   };
+
+	annyang.addCallback('result', function(whatWasHeardArray) {
+	 document.body.style.background = whatWasHeardArray[0];
+	console.log(whatWasHeardArray[0]);
+	});
 
   // Add our commands to annyang
   annyang.addCommands(commands);
