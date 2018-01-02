@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>Diploma</title>
+	<link rel="stylesheet" href="styles/styles.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+	
+	<section class="welcome_home">
+		<div class="welcome_block">
+			<h2 class="welcome_title">Welcome home!</h2>
+			<p class="welcome_info">
+				Choose room or go to admin panel!
+			</p>
+		</div>
+		<div class="rooms">
+			<div class="room_image" id="living_room">
+				<img src="images/living_room.jpg" alt="Living room">
+				<div class="room_description">
+					<h2>Living room</h2>
+					<button class="room_button living_room_button">Show living room</button>
+				</div>
+			</div>
+			<div class="room_image" id="bedroom">
+				<img src="images/bedroom.jpg" alt="Bedroom">
+				<div class="room_description">
+					<h2>Bedroom</h2>
+					<button class="room_button bedroom_button">Show bedroom</button>
+				</div>
+			</div>
+			<div class="room_image" id="dining_room">
+				<img src="images/dining_room.jpg" alt="Dining room">
+				<div class="room_description">
+					<h2>Dining room</h2>
+					<button class="room_button dining_room_button">Show dining room</button>
+				</div>
+			</div>
+			<div class="room_image" id="kitchen">
+				<img src="images/kitchen.jpg" alt="Kitchen">
+				<div class="room_description">
+					<h2>Kitchen</h2>
+					<button class="room_button kitchen_button">Show kitchen</button>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<div class="lRoom-modal modal-room">
+		<div class="modal-content">
+			<button class="fa fa-close close-modal"></button>
+			<div class="modal-header">
+				<i class="fa fa-home modal-header-icon"></i>
+				<h3 class="modal-title">Living Room</h3>
+			</div>
+			<div class="modal-manage">
+				<div class="manage-block ceil">
+					<div class="manage-title">
+						<i class="fa fa-lightbulb-o icon"></i>
+						<span>Ceiling Lights</span>
+					</div>
+					<label class="manage-switch">
+						<input type="checkbox">
+						<span class="manage-slider"></span>
+					</label>
+				</div>
+				<div class="manage-block table-lamp">
+					<div class="manage-title">
+						<i class="fa fa-lightbulb-o icon"></i>
+						<span>Table Lamp</span>
+					</div>
+					<label class="manage-switch">
+						<input type="checkbox">
+						<span class="manage-slider"></span>
+					</label>
+				</div>
+				<div class="manage-block tv-light">
+					<div class="manage-title">
+						<i class="fa fa-lightbulb-o icon"></i>
+						<span>TV Back Light</span>
+					</div>
+					<label class="manage-switch">
+						<input type="checkbox">
+						<span class="manage-slider"></span>
+					</label>
+				</div>
+				<div class="manage-block tv">
+					<div class="manage-title">
+						<i class="fa fa-television icon"></i>
+						<span>TV</span>
+					</div>
+					<label class="manage-switch">
+						<input type="checkbox">
+						<span class="manage-slider"></span>
+					</label>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="diningRoom-modal modal-room">
+		<div class="modal-content">
+			<button class="fa fa-close close-modal"></button>
+			<div class="modal-header">
+				<i class="fa fa-home modal-header-icon"></i>
+				<h3 class="modal-title">Dining Room</h3>
+			</div>
+			<div class="modal-manage">
+				<div class="manage-block ceil">
+					<div class="manage-title">
+						<i class="fa fa-lightbulb-o icon"></i>
+						<span>Ceiling Lights</span>
+					</div>
+					<label class="manage-switch">
+						<input type="checkbox">
+						<span class="manage-slider"></span>
+					</label>
+				</div>
+				<div class="manage-block table-lamp">
+					<div class="manage-title">
+						<i class="fa fa-lightbulb-o icon"></i>
+						<span>Table Lamp</span>
+					</div>
+					<label class="manage-switch">
+						<input type="checkbox">
+						<span class="manage-slider"></span>
+					</label>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
+
+	<script src="js/welcome.js"></script>
+</body>
+</html>

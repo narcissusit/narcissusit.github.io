@@ -22,12 +22,12 @@ body {
   color: #fff;
   text-align: center;
   margin-top: 50px;
-  font-size: 50px; }
+  font-size: 30px; }
 
 .custom-form {
   font-size: 30px;
   max-width: 1170px;
-  margin: 40px auto 40px;
+  margin: 20px auto;
   padding: 40px;
   border-radius: 4px;
   outline: none; }
@@ -100,3 +100,321 @@ body {
   visibility: visible;
   width: 100%;
   left: 0; }
+
+.signin_button {
+  width: 250px;
+  height: 50px;
+  background-color: #420547;
+  color: #fff;
+  border: none;
+  font-size: 25px;
+  display: block;
+  text-align: center;
+  margin: auto; }
+  .signin_button:hover {
+    cursor: pointer; }
+
+.register_link {
+  text-align: center;
+  color: #fff;
+  display: block;
+  font-size: 16px;
+  padding: 10px;
+  text-decoration: none; }
+
+.welcome_home {
+  background-image: url("../images/house.jpg");
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 100vh;
+  padding-top: 40px; }
+
+.welcome_block {
+  width: 100%;
+  height: auto;
+  background-color: rgba(0, 0, 0, 0.5); }
+
+.welcome_title {
+  color: #fff;
+  text-align: center;
+  font-size: 30px;
+  padding: 20px; }
+
+.welcome_info {
+  color: #bccdff;
+  text-align: center;
+  font-size: 20px;
+  padding: 20px; }
+
+.rooms {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap; }
+
+#living_room, #bedroom, #dining_room, #kitchen {
+  position: relative;
+  width: calc(50% - 20px);
+  height: 0;
+  padding-top: 40%;
+  overflow: hidden;
+  margin: 10px;
+  border: 2px solid #fff;
+  box-shadow: 6px 7px 72px -2px #7a5370;
+  transition: all .4s ease; }
+  #living_room img, #bedroom img, #dining_room img, #kitchen img {
+    position: absolute;
+    height: 100%;
+    width: auto;
+    top: 0; }
+  #living_room:hover .room_description, #bedroom:hover .room_description, #dining_room:hover .room_description, #kitchen:hover .room_description {
+    visibility: visible;
+    opacity: 1; }
+    #living_room:hover .room_description h2, #bedroom:hover .room_description h2, #dining_room:hover .room_description h2, #kitchen:hover .room_description h2 {
+      font-size: 20px; }
+
+.room_description {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  display: flex;
+  visibility: none;
+  opacity: 0;
+  transition: all 0s ease; }
+  .room_description h2 {
+    color: #fff;
+    font-size: 10px;
+    transition: all .6s ease; }
+  .room_description .room_button {
+    width: 50%;
+    height: 30px;
+    margin: 0 20%;
+    background-color: #19277a;
+    color: #fff;
+    border: none;
+    font-size: 12px; }
+
+.room_info .room_description {
+  visibility: visible;
+  opacity: 1; }
+  .room_info .room_description h2 {
+    font-size: 20px; }
+
+.modal-room {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 1s ease-out; }
+
+.modal-room-show {
+  opacity: 1;
+  visibility: visible; }
+
+.modal-content {
+  background-color: #f0f0f0;
+  border-radius: 12px;
+  width: 50%;
+  min-width: 300px;
+  height: 0;
+  transition: all .5s ease;
+  position: relative; }
+
+.modal-header {
+  background-color: #fff;
+  border-radius: 12px 12px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 1s ease; }
+  .modal-header .modal-header-icon {
+    font-size: 30px;
+    margin-right: 10px;
+    color: #00acee; }
+  .modal-header .modal-title {
+    font-size: 25px; }
+
+.modal-content-show {
+  height: auto; }
+
+.modal-header-show {
+  opacity: 1;
+  visibility: visible; }
+
+.fa-close.close-modal {
+  font-size: 30px; }
+
+.close-modal {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: -15px;
+  top: -15px;
+  border-radius: 50%;
+  border: none;
+  background-color: transparent;
+  color: #ff0000;
+  outline: none; }
+
+.modal-manage {
+  padding: 20px; }
+
+.manage-title {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  margin-top: 10px; }
+  .manage-title .icon {
+    font-size: 40px;
+    padding-right: 10px;
+    width: 60px;
+    text-align: center; }
+
+.manage-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+
+.manage-switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 10px; }
+  .manage-switch input {
+    display: none; }
+
+.manage-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  box-shadow: 0px 0px 0px 3px rgba(252, 252, 252, 0.89), 0px 0px 7px 3px rgba(57, 57, 57, 0.3) inset;
+  -webkit-transition: .2s;
+  transition: .2s;
+  border-radius: 34px; }
+  .manage-slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    top: -8px;
+    background-color: #fff;
+    -webkit-transition: .2s;
+    transition: .2s;
+    border-radius: 50%;
+    box-shadow: 0px 0px 14.73px 0.27px rgba(57, 57, 57, 0.75); }
+
+.manage-switch input:checked + .manage-slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+  box-shadow: 0px 0px 14.73px 0.27px rgba(250, 250, 250, 0.75); }
+
+.ceil .manage-switch input:checked + .manage-slider {
+  background-color: #ff95bd; }
+
+.ceil .manage-switch input:focus + .manage-slider {
+  box-shadow: 0 0 1px #ff95bd; }
+
+.ceil .manage-switch input:checked + .manage-slider:before {
+  background-color: #ba2754; }
+
+.ceil .icon {
+  color: #ba2754; }
+
+.table-lamp .manage-switch input:checked + .manage-slider {
+  background-color: #afb8ff; }
+
+.table-lamp .manage-switch input:focus + .manage-slider {
+  box-shadow: 0 0 10px #afb8ff; }
+
+.table-lamp .manage-switch input:checked + .manage-slider:before {
+  background-color: #004a85; }
+
+.table-lamp .icon {
+  color: #004a85; }
+
+.tv-light .manage-switch input:checked + .manage-slider {
+  background-color: #51c060; }
+
+.tv-light .manage-switch input:focus + .manage-slider {
+  box-shadow: 0 0 10px #51c060; }
+
+.tv-light .manage-switch input:checked + .manage-slider:before {
+  background-color: #1b7012; }
+
+.tv-light .icon {
+  color: #1b7012; }
+
+.tv .manage-switch input:checked + .manage-slider {
+  background-color: #dd81de; }
+
+.tv .manage-switch input:focus + .manage-slider {
+  box-shadow: 0 0 10px #dd81de; }
+
+.tv .manage-switch input:checked + .manage-slider:before {
+  background-color: #4c114d; }
+
+.tv .icon {
+  color: #4c114d; }
+
+@media (min-width: 640px) {
+  .main_title {
+    font-size: 50px; }
+  .custom-form {
+    margin: 40px; } }
+
+@media (min-width: 820px) {
+  .welcome_home {
+    padding-top: 0;
+    padding-left: 10%;
+    display: flex;
+    flex-wrap: wrap; }
+  .welcome_block {
+    width: 40%;
+    height: 100vh;
+    padding-top: 20%; }
+  .rooms {
+    width: 60%; } }
+
+@media (min-width: 960px) {
+  .welcome_block {
+    width: 30%; }
+  .welcome_title {
+    font-size: 50px; }
+  .welcome_info {
+    font-size: 30px; }
+  .rooms {
+    margin: 30px;
+    width: calc(70% - 60px); }
+  #living_room, #bedroom, #dining_room, #kitchen {
+    width: 40%;
+    padding-top: 30%; }
+    #living_room:hover, #bedroom:hover, #dining_room:hover, #kitchen:hover {
+      transform: scale(1.2); }
+      #living_room:hover .room_description h2, #bedroom:hover .room_description h2, #dining_room:hover .room_description h2, #kitchen:hover .room_description h2 {
+        font-size: 30px; }
+  .room_info {
+    transform: scale(1.2); }
+    .room_info .room_description h2 {
+      font-size: 30px; } }

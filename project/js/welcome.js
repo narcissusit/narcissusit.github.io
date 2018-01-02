@@ -1,44 +1,5 @@
 if (annyang) {
 
-  var login = function(name){
-      var user = document.getElementById('user');
-      user.focus();
-      user.value = name;
-      console.log("username " + name);
-    };
-
-  var addPassword = function(pass){
-      var password = document.getElementById('pass');
-      password.focus();
-      password.value = pass;
-      console.log("password " + pass);
-    };
-
-  var registerNow = function(){
-    location.href = 'register.html';
-  }
-
-   var signIn = function(){
-    location.href = 'index.html';
-  }
-
-  var register = function(){
-    var formData = $("#contacts-form").serialize();
-    $.ajax({
-      type: "POST",
-      url: 'database.json',
-      data: formData,
-      success: function(data) {
-        console.log(data);
-      }
-    });
-    location.href = 'index.html';
-  }
-
-  var welcome = function(){
-    location.href = 'welcome.html';
-  }
-
   var livingRoom = function(){
     $('#living_room').addClass('room_info');
     $('#bedroom').removeClass('room_info');
@@ -71,13 +32,47 @@ if (annyang) {
     console.log('yes');
   }
 
-  var loginCommands = {
-    'username *name': login,
-    'password *pass': addPassword,
-    'register now': registerNow, 
-    'back to sign in': signIn,
-    'register': register,
-    'sign in': welcome,
+  var showLiving = function(){
+    window.scrollTo(0,0);
+    $('.lRoom-modal').addClass('modal-room-show');
+    $('.lRoom-modal > .modal-content').addClass('modal-content-show');
+    $('.lRoom-modal > .modal-content > .modal-header').addClass('modal-header-show');
+    $('body').css({'overflow-y':'hidden'});  
+  }
+
+  var showDining = function(){
+    window.scrollTo(0,0);
+    $('.diningRoom-modal').addClass('modal-room-show');
+    $('.diningRoom-modal > .modal-content').addClass('modal-content-show');
+    $('.diningRoom-modal > .modal-content > .modal-header').addClass('modal-header-show');
+    $('body').css({'overflow-y':'hidden'});  
+  }
+
+   var close = function(){
+    $('.modal-room').removeClass('modal-room-show');
+    $('.modal-room > .modal-content').removeClass('modal-content-show');
+    $('.modal-room > .modal-content > .modal-header').removeClass('modal-header-show');
+    $('body').css({'overflow-y':'visible'});  
+  }
+
+  var ceilingOn = function(){
+    console.log('ceiling on');
+    $('.modal-room-show .ceil input[type="checkbox"]').prop('checked', true);
+  };
+
+  var ceilingOff = function(){
+    console.log('ceiling off');
+    $('.modal-room-show .ceil input[type="checkbox"]').prop('checked', false);
+  };
+
+  var tableLampOn = function(){
+    console.log('ceiling on');
+    $('.modal-room-show .table-lamp input[type="checkbox"]').prop('checked', true);
+  };
+
+  var tableLampOff = function(){
+    console.log('ceiling off');
+    $('.modal-room-show .table-lamp input[type="checkbox"]').prop('checked', false);
   };
 
   var userCommands = {
@@ -85,28 +80,29 @@ if (annyang) {
     'bedroom': bedRoom,
     'dining room': diningRoom,
     'kitchen': kitchen,
+    'show living room': showLiving,
+    'show dining room': showDining,
+    'close room': close,
+    'close living room': close,
+    'ceiling lights on': ceilingOn,
+    'ceiling lights off': ceilingOff,
+    'table lamp on': tableLampOn,
+    'table lamp off': tableLampOff
   };
-  
-  annyang.addCommands(loginCommands);
+
   annyang.addCommands(userCommands);
   
   annyang.start();
 
 }
 
+$('.close-modal').click(function(){
+  console.log('i click');
+  close();
+});
 
-$('#contacts-form').submit(function(e){
-    e.preventDefault();
-    var formData = $("#contacts-form").serialize();
-
-    $.ajax({
-      type: "POST",
-      url: 'database.json',
-      data: formData,
-      success: function(data) {
-        console.log(data);
-      }
-  })
+$('.living_room_button').click(function(){
+  showLiving();
 });
 
 $('#living_room').hover(function(){
