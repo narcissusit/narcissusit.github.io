@@ -5,16 +5,16 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<title>Diploma</title>
 	<link rel="stylesheet" href="styles/styles.css">
-	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat|Indie+Flower|Josefin+Sans" rel="stylesheet">
 	<link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
 </head>
-<body>
+<body onload="startTime()">
 	
 	<section class="welcome_home">
 		<div class="welcome_block">
 			<h2 class="welcome_title">Welcome home!</h2>
 			<p class="welcome_info">
-				Choose room or go to admin panel!
+				Choose room or <span class="go_admin">go to admin panel!</span>
 			</p>
 		</div>
 		<div class="rooms">
@@ -49,9 +49,166 @@
 		</div>
 	</section>
 
+	<section class="admin_panel">
+		<div class="admin-header">
+			<h2>Smart House</h2>
+		</div>
+		<div class="masonry">
+			<div class="admin-welcome item">
+				<h2>Welcome Home!</h2>
+				<img class="welcome-admin-image" src="images/home.jpg" alt="Home">
+			</div>
+			<div class="main-info admin-panel-block item">
+				<h2 class="admin-panel-title">Main Information</h2>
+				<div class="manage-block">
+					<div class="manage-title time">
+						<i class="fa fa-clock-o icon"></i>
+						<span>Time</span>
+					</div>
+					<div class="time_info">
+						<span id="date" class="date_info"></span>
+						<span id="time" class="time_info"></span>
+					</div>
+				</div>
+				<div class="manage-block">
+					<div class="manage-title weather">
+						<i class="fa fa-cloud icon"></i>
+						<span>Weather</span>
+					</div>
+					<div class="weather_info" id="weather">
+					</div>
+				</div>
+				<div class="manage-block">
+					<div class="manage-title location">
+						<i class="fa fa-map-marker icon"></i>
+						<span>Location</span>
+					</div>
+					<span class="location_info" id="location">
+					</span>
+				</div>
+			</div>
+			<div class="general-controls admin-panel-block item">
+				<h2 class="admin-panel-title">General Controls</h2>
+				<div class="manage-block central-heating">
+					<div class="manage-title">
+						<i class="fa fa-thermometer-full icon"></i>
+						<span>Central Heating</span>
+					</div>
+					<label class="manage-switch">
+						<input type="checkbox">
+						<span class="manage-slider"></span>
+					</label>
+				</div>
+				<div class="manage-block alarm">
+					<div class="manage-title">
+						<i class="fa fa-bell-o icon"></i>
+						<span>Alarm System</span>
+					</div>
+					<label class="manage-switch">
+						<input type="checkbox">
+						<span class="manage-slider"></span>
+					</label>
+				</div>
+				<div class="manage-block lock">
+					<div class="manage-title">
+						<i class="fa fa-lock icon"></i>
+						<span>Locks</span>
+					</div>
+					<label class="manage-switch">
+						<input type="checkbox">
+						<span class="manage-slider"></span>
+					</label>
+				</div>
+				<div class="manage-block internet">
+					<div class="manage-title">
+						<i class="fa fa-wifi icon"></i>
+						<span>Internet</span>
+					</div>
+					<label class="manage-switch">
+						<input type="checkbox">
+						<span class="manage-slider"></span>
+					</label>
+				</div>
+			</div>
+			<div class="room-show admin-panel-block item">
+				<img src="images/dining_room.jpg" alt="Room" class="room_image-show">
+				<div class="room_description-show">
+					<span>Room's photos</span>
+				</div>
+			</div>
+			<div class="room-controls admin-panel-block item">
+				<h2 class="admin-panel-title">Room Control</h2>
+				<div class="manage-block">
+					<div class="manage-title">
+						<span>Living Room</span>
+					</div>
+					<label class="manage-switch">
+						<input type="checkbox">
+						<span class="manage-icon"></span>
+					</label>
+				</div>
+				<div class="manage-block">
+					<div class="manage-title">
+						<span>Bedroom</span>
+					</div>
+					<label class="manage-switch">
+						<input type="checkbox">
+						<span class="manage-icon"></span>
+					</label>
+				</div>
+				<div class="manage-block">
+					<div class="manage-title">
+						<span>Dining Room</span>
+					</div>
+					<label class="manage-switch">
+						<input type="checkbox">
+						<span class="manage-icon"></span>
+					</label>
+				</div>
+				<div class="manage-block">
+					<div class="manage-title">
+						<span>Kitchen</span>
+					</div>
+					<label class="manage-switch">
+						<input type="checkbox">
+						<span class="manage-icon"></span>
+					</label>
+				</div>
+			</div>
+			<div class="extra-calls admin-panel-block item">
+				<h2 class="admin-panel-title">Extra Calls</h2>
+				<div class="manage-block">
+					<div class="manage-title">
+						<span>Fire Service</span>
+					</div>
+					<a class="manage-call" href="tel:101">101</a>
+				</div>
+				<div class="manage-block">
+					<div class="manage-title">
+						<span>Police</span>
+					</div>
+					<a class="manage-call" href="tel:102">102</a>
+				</div>
+				<div class="manage-block">
+					<div class="manage-title">
+						<span>Ambulance</span>
+					</div>
+					<a class="manage-call" href="tel:103">103</a>
+				</div>
+				<div class="manage-block">
+					<div class="manage-title">
+						<span>Gas service</span>
+					</div>
+					<a class="manage-call" href="tel:104">104</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
 	<div class="lRoom-modal modal-room">
 		<div class="modal-content">
-			<button class="fa fa-close close-modal"></button>
+			<button class="close-modal">x</button>
 			<div class="modal-header">
 				<i class="fa fa-home modal-header-icon"></i>
 				<h3 class="modal-title">Living Room</h3>
@@ -103,7 +260,7 @@
 
 	<div class="diningRoom-modal modal-room">
 		<div class="modal-content">
-			<button class="fa fa-close close-modal"></button>
+			<button class="close-modal">x</button>
 			<div class="modal-header">
 				<i class="fa fa-home modal-header-icon"></i>
 				<h3 class="modal-title">Dining Room</h3>
@@ -133,8 +290,97 @@
 		</div>
 	</div>
 
+	<div class="bedroom-modal modal-room">
+		<div class="modal-content">
+			<button class="close-modal">x</button>
+			<div class="modal-header">
+				<i class="fa fa-home modal-header-icon"></i>
+				<h3 class="modal-title">Bedroom</h3>
+			</div>
+			<div class="modal-manage">
+				<div class="manage-block ceil">
+					<div class="manage-title">
+						<i class="fa fa-lightbulb-o icon"></i>
+						<span>Ceiling Lights</span>
+					</div>
+					<label class="manage-switch">
+						<input type="checkbox">
+						<span class="manage-slider"></span>
+					</label>
+				</div>
+				<div class="manage-block table-lamp">
+					<div class="manage-title">
+						<i class="fa fa-lightbulb-o icon"></i>
+						<span>Table Lamp</span>
+					</div>
+					<label class="manage-switch">
+						<input type="checkbox">
+						<span class="manage-slider"></span>
+					</label>
+				</div>
+				<div class="manage-block air">
+					<div class="manage-title">
+						<i class="fa fa-snowflake-o icon"></i>
+						<span>Air Conditioning</span>
+					</div>
+					<label class="manage-switch">
+						<input type="checkbox">
+						<span class="manage-slider"></span>
+					</label>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="kitchen-modal modal-room">
+		<div class="modal-content">
+			<button class="close-modal">x</button>
+			<div class="modal-header">
+				<i class="fa fa-home modal-header-icon"></i>
+				<h3 class="modal-title">Kitchen</h3>
+			</div>
+			<div class="modal-manage">
+				<div class="manage-block ceil">
+					<div class="manage-title">
+						<i class="fa fa-lightbulb-o icon"></i>
+						<span>Ceiling Lights</span>
+					</div>
+					<label class="manage-switch">
+						<input type="checkbox">
+						<span class="manage-slider"></span>
+					</label>
+				</div>
+				<div class="manage-block cooker">
+					<div class="manage-title">
+						<i class="fa fa-cutlery icon"></i>
+						<span>Сooker</span>
+					</div>
+					<label class="manage-switch">
+						<input type="checkbox">
+						<span class="manage-slider"></span>
+					</label>
+				</div>
+				<div class="manage-block kettle">
+					<div class="manage-title">
+						<i class="fa fa-coffee icon"></i>
+						<span>Kettle</span>
+					</div>
+					<label class="manage-switch">
+						<input type="checkbox">
+						<span class="manage-slider"></span>
+					</label>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
+	<script src="js/simpleWeather/jquery.simpleWeather.min.js"></script>
+
+
+
 
 	<script src="js/welcome.js"></script>
 </body>

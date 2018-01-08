@@ -1,4 +1,112 @@
 $font: "Montserrat", 'Monotype Corsiva'
+$backColorGrey: #383838
+
+@font-face
+    font-family: 'weather'
+    src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.eot')
+    src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.eot?#iefix') format('embedded-opentype'), 
+    url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.woff') format('woff'),
+    url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.ttf') format('truetype'),
+    url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.svg#artill_clean_weather_iconsRg') format('svg')
+    font-weight: normal
+    font-style: normal
+
+.icon-0:before
+	content: ":"
+.icon-1:before
+	content: "p"
+.icon-2:before
+	content: "S"
+.icon-3:before
+	content: "Q"
+.icon-4:before
+	content: "S"
+.icon-5:before
+	content: "W"
+.icon-6:before
+	content: "W"
+.icon-7:before
+	content: "W"
+.icon-8:before
+	content: "W"
+.icon-9:before
+	content: "I"
+.icon-10:before
+	content: "W"
+.icon-11:before
+	content: "I"
+.icon-12:before
+	content: "I"
+.icon-13:before
+	content: "I"
+.icon-14:before
+	content: "I"
+.icon-15:before
+	content: "W"
+.icon-16:before
+	content: "I"
+.icon-17:before
+	content: "W"
+.icon-18:before
+	content: "U"
+.icon-19:before
+	content: "Z"
+.icon-20:before 
+	content: "Z"
+.icon-21:before
+	content: "Z"
+.icon-22:before
+	content: "Z"
+.icon-23:before
+	content: "Z"
+.icon-24:before
+	content: "E"
+.icon-25:before
+	content: "E"
+.icon-26:before
+	content: "3"
+.icon-27:before
+	content: "a"
+.icon-28:before
+	content: "A"
+.icon-29:before
+	content: "a"
+.icon-30:before 
+	content: "A"
+.icon-31:before
+	content: "6"
+.icon-32:before
+	content: "1"
+.icon-33:before
+	content: "6"
+.icon-34:before
+	content: "1"
+.icon-35:before
+	content: "W"
+.icon-36:before
+	content: "1"
+.icon-37:before
+	content: "S"
+.icon-38:before
+	content: "S"
+.icon-39:before
+	content: "S"
+.icon-40:before
+	content: "M"
+.icon-41:before
+	content: "W"
+.icon-42:before
+	content: "I"
+.icon-43:before
+	content: "W"
+.icon-44:before
+	content: "a"
+.icon-45:before
+	content: "S"
+.icon-46:before
+	content: "U"
+.icon-47:before
+	content: "S"
 
 *
 	box-sizing: border-box
@@ -150,6 +258,10 @@ body
 	text-align: center
 	font-size: 20px
 	padding: 20px
+	.go_admin
+		cursor: pointer
+		display: block
+		color: #dedede
 
 .rooms
 	display: flex
@@ -200,7 +312,8 @@ body
 		width: 50%
 		height: 30px
 		margin: 0 20%
-		background-color: #19277a
+		background-color: #466755
+		box-shadow: 2px 3px 8.1px 1.9px rgba(0, 0, 0, 0.75)
 		color: #fff
 		border: none
 		font-size: 12px
@@ -225,7 +338,7 @@ body
 	display: flex
 	opacity: 0
 	visibility: hidden
-	transition: all 1s ease-out
+	transition: all 1s ease-in
 
 .modal-room-show
 	opacity: 1
@@ -241,7 +354,8 @@ body
 	position: relative
 
 .modal-header
-	background-color: #fff
+	background-color: $backColorGrey
+	color: #fff
 	border-radius: 12px 12px 0 0
 	display: flex
 	align-items: center
@@ -253,7 +367,7 @@ body
 	.modal-header-icon
 		font-size: 30px
 		margin-right: 10px
-		color: #00acee
+		color: #fff
 	.modal-title
 		font-size: 25px
 
@@ -264,19 +378,18 @@ body
 	opacity: 1
 	visibility: visible
 
-.fa-close.close-modal
-	font-size: 30px
-
 .close-modal
 	width: 30px
 	height: 30px
+	font-size: 50px
+	font-family: 'Indie Flower', cursive
 	position: absolute
 	right: -15px
-	top: -15px
+	top: -40px
 	border-radius: 50%
 	border: none
 	background-color: transparent
-	color: #ff0000
+	color: #fff
 	outline: none
 
 .modal-manage
@@ -383,6 +496,239 @@ body
 	.icon
 		color: #4c114d
 
+.air
+	.manage-switch 
+		input:checked + .manage-slider
+			background-color: #8f8f8f
+		input:focus + .manage-slider
+			box-shadow: 0 0 10px #8f8f8f
+		input:checked + .manage-slider:before
+			background-color: #adb5c1
+	.icon
+		color: #adb5c1
+
+.cooker
+	.manage-switch 
+		input:checked + .manage-slider
+			background-color: #16052f
+		input:focus + .manage-slider
+			box-shadow: 0 0 10px #16052f
+		input:checked + .manage-slider:before
+			background-color: #45168b
+	.icon
+		color: #45168b
+
+.kettle
+	.manage-switch 
+		input:checked + .manage-slider
+			background-color: #603742
+		input:focus + .manage-slider
+			box-shadow: 0 0 10px #603742
+		input:checked + .manage-slider:before
+			background-color: #441f29
+	.icon
+		color: #441f29
+
+.admin_panel
+	width: 100%
+	background-color: #ececec
+
+.admin-welcome
+	background-color: #fff
+	border-radius: 8px
+	box-shadow: 0px 0px 14.73px 0.27px rgba(0, 0, 0, 0.5)
+	margin-bottom: 10px
+	h2
+		background-color: $backColorGrey
+		padding: 10px
+		text-align: center
+		color: #fff
+		border-radius: 8px 8px 0 0
+	.welcome-admin-image
+		width: 70%
+		margin: auto
+		display: block
+
+.admin-panel-block
+	background-color: #fff
+	border-radius: 8px
+	box-shadow: 0px 0px 14.73px 0.27px rgba(0, 0, 0, 0.5)
+	margin-bottom: 10px
+	padding: 20px
+	.admin-panel-title
+		padding-left: 10px
+		padding-bottom: 10px
+
+.central-heating
+	.manage-switch 
+		input:checked + .manage-slider
+			background-color: #7d0202
+		input:focus + .manage-slider
+			box-shadow: 0 0 10px #7d0202
+		input:checked + .manage-slider:before
+			background-color: #f00
+	.icon
+		color: #f00
+
+
+.alarm
+	.manage-switch 
+		input:checked + .manage-slider
+			background-color: #fff1ad
+		input:focus + .manage-slider
+			box-shadow: 0 0 10px #fff1ad
+		input:checked + .manage-slider:before
+			background-color: #ffd200
+	.icon
+		color: #ffd200
+
+.lock
+	.manage-switch 
+		input:checked + .manage-slider
+			background-color: #146864
+		input:focus + .manage-slider
+			box-shadow: 0 0 10px #146864
+		input:checked + .manage-slider:before
+			background-color: #17c4bb
+	.icon
+		color: #17c4bb
+
+.internet
+	.manage-switch 
+		input:checked + .manage-slider
+			background-color: #547fc0
+		input:focus + .manage-slider
+			box-shadow: 0 0 10px #547fc0
+		input:checked + .manage-slider:before
+			background-color: #79aeff
+	.icon
+		color: #79aeff
+
+.main-info
+	.manage-block
+		padding: 10px 0
+	.manage-title
+		margin: 0
+	.location_info
+		font-family: 'Josefin Sans'
+		font-size: 20px
+		color: #505050
+	
+.date_info, .time_info
+	display: block
+	text-align: center
+	margin-top: 5px
+	font-family: 'Josefin Sans'
+	font-size: 20px
+	color: #505050
+
+.weather_info
+	font-family: 'Josefin Sans'
+	font-size: 20px
+	color: #505050
+	i
+		&:before
+			font-family: 'weather'
+			font-style: normal
+			font-weight: bold
+			font-size: 25px
+
+.time_info, .weather_info, .location_info
+	width: 150px
+	display: inline-block
+	text-align: center
+
+.time
+	.icon
+		color: #bebebe
+
+.weather
+	.icon
+		color: #00234e
+
+.location
+	.icon
+		color: #670000
+
+.masonry
+	column-gap: 1.5em
+	column-count: 1
+	height: 100%
+	padding: 0
+	margin: 0
+	width: 100%
+	padding: 10px
+
+.admin-welcome, .admin-panel-block
+	width: 100%
+	max-width: 100%
+	height: auto
+	display: inline-block
+
+.admin-header
+	width: 100%
+	height: 100px
+	background-color: $backColorGrey
+	h2
+		color: #fff
+		font-size: 30px
+		text-align: center
+		line-height: 100px
+
+.admin_panel
+	display: none
+
+.room-show
+	position: relative
+	padding: 0
+	margin: 0
+	background-color: transparent
+
+.room_image-show
+	width: 100%
+	padding: 0
+	border-radius: 8px
+
+.room_description-show
+	position: absolute
+	bottom: 0
+	padding: 5px
+	width: 100%
+	z-index: 10
+	background-color: rgba(0,0,0,.75)
+	color: #fff
+	height: 30px
+	border-radius: 0 0 8px 8px
+
+.room-controls
+	.manage-title
+		padding-left: 10px
+	.manage-icon
+		height: auto
+		cursor: pointer
+		&::after
+			content: '\f070'
+			font-family: FontAwesome
+			font-size: 30px
+			color: #6c6c6c
+	.manage-switch
+		height: auto
+		input:checked + .manage-icon::after
+			content: '\f06e'
+			color: #ff004e
+
+.extra-calls
+	.manage-title
+		padding-left: 10px
+
+.manage-call
+	text-decoration: none
+	color: #ff0030
+	width: 50px
+	text-align: center
+	font-size: 30px
+	height: auto
+
 
 @media(min-width: 640px)
 	.main_title
@@ -390,6 +736,9 @@ body
 
 	.custom-form
 		margin: 40px
+
+	.masonry
+		column-count: 2
 
 @media(min-width: 820px)
 	.welcome_home
@@ -406,6 +755,12 @@ body
 	.rooms
 		width: 60%
 
+	.admin_panel
+		.admin-welcome, .admin-panel-block
+			margin: 10px
+
+	.masonry
+		column-count: 3
 
 @media(min-width: 960px)
 	.welcome_block
@@ -435,3 +790,6 @@ body
 		.room_description
 			h2
 				font-size: 30px
+
+	.modal-manage
+		padding: 40px
