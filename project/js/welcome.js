@@ -230,19 +230,19 @@ if (annyang) {
   }
 
   var fire = function(){
-    location.href = 'tel:101';
+    window.location.href = 'tel:101';
   }
 
   var police = function(){
-    location.href = 'tel:102';
+    window.location.href = 'tel:102';
   }
 
   var ambulance = function(){
-    location.href = 'tel:103';
+    window.location.href = 'tel:103';
   }
 
   var gas = function(){
-    location.href = 'tel:104';
+    window.location.href = 'tel:104';
   }
 
   var userCommands = {
