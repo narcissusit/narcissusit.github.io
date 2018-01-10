@@ -230,7 +230,7 @@ if (annyang) {
   }
 
   var fire = function(){
-    window.open('tel:101');
+    window.location = 'tel:5555555555';
   }
 
   var police = function(){
