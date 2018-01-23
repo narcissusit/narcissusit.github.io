@@ -238,19 +238,19 @@ if (annyang) {
   }
 
   var fire = function(){
-    window.location = 'tel:5555555555';
+    location.href = 'tel:101';
   }
 
   var police = function(){
-    window.location.href = 'tel:102';
+    location.href = 'tel:102';
   }
 
   var ambulance = function(){
-    window.location.href = 'tel:103';
+    location.href = 'tel:103';
   }
 
   var gas = function(){
-    window.location.href = 'tel:104';
+    location.href = 'tel:104';
   }
 
   var shRooms = function(){
