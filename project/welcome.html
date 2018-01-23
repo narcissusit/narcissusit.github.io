@@ -7,6 +7,8 @@
 	<link rel="stylesheet" href="styles/styles.css">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat|Indie+Flower|Josefin+Sans" rel="stylesheet">
 	<link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="js/OwlCarousel/docs/assets/owlcarousel/assets/owl.carousel.min.css">
+	<link rel="stylesheet" href="js/OwlCarousel/docs/assets/owlcarousel/assets/owl.theme.default.min.css">
 </head>
 <body onload="startTime()">
 	
@@ -138,7 +140,7 @@
 			</div>
 			<div class="room-controls admin-panel-block item">
 				<h2 class="admin-panel-title">Room Control</h2>
-				<div class="manage-block">
+				<div class="manage-block living_room_eye">
 					<div class="manage-title">
 						<span>Living Room</span>
 					</div>
@@ -147,7 +149,7 @@
 						<span class="manage-icon"></span>
 					</label>
 				</div>
-				<div class="manage-block">
+				<div class="manage-block bedroom_eye">
 					<div class="manage-title">
 						<span>Bedroom</span>
 					</div>
@@ -156,7 +158,7 @@
 						<span class="manage-icon"></span>
 					</label>
 				</div>
-				<div class="manage-block">
+				<div class="manage-block dining_room_eye">
 					<div class="manage-title">
 						<span>Dining Room</span>
 					</div>
@@ -165,7 +167,7 @@
 						<span class="manage-icon"></span>
 					</label>
 				</div>
-				<div class="manage-block">
+				<div class="manage-block kitchen_eye">
 					<div class="manage-title">
 						<span>Kitchen</span>
 					</div>
@@ -202,9 +204,30 @@
 					<a class="manage-call" href="tel:104">104</a>
 				</div>
 			</div>
+			<div class="item">
+				<button class="go_to_rooms">Go to rooms</button>
+			</div>
 		</div>
 	</section>
 
+	<div class="modal room-slider" id="modal">
+		<div class="modal-slider-content">
+			<div class="owl-carousel owl-theme">
+				<div class="slider-block item">
+					<img src="images/dining_room.jpg" alt="Dining room">
+				</div>
+				<div class="slider-block item">
+					<img src="images/bedroom.jpg" alt="Bedroom">
+				</div>
+				<div class="slider-block item">
+					<img src="images/living_room.jpg" alt="Living room">
+				</div>
+				<div class="slider-block item">
+					<img src="images/kitchen.jpg" alt="Kitchen">
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<div class="lRoom-modal modal-room">
 		<div class="modal-content">
@@ -378,9 +401,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
 	<script src="js/simpleWeather/jquery.simpleWeather.min.js"></script>
-
-
-
+	<script src="js/OwlCarousel/dist/owl.carousel.min.js"></script>
 
 	<script src="js/welcome.js"></script>
 </body>

@@ -19,11 +19,11 @@ if (annyang) {
   }
 
    var signIn = function(){
-    location.href = 'index.html';
+    signIN();
   }
 
   var register = function(){
-    var formData = $("#contacts-form").serialize();
+    var formData = $(".custom-form").serialize();
     $.ajax({
       type: "POST",
       url: 'database.json',
@@ -36,39 +36,7 @@ if (annyang) {
   }
 
   var welcome = function(){
-    location.href = 'welcome.html';
-  }
-
-  var livingRoom = function(){
-    $('#living_room').addClass('room_info');
-    $('#bedroom').removeClass('room_info');
-    $('#dining_room').removeClass('room_info');
-    $('#kitchen').removeClass('room_info');
-    console.log('yes');
-  }
-
-  var bedRoom = function(){
-    $('#living_room').removeClass('room_info');
-    $('#bedroom').addClass('room_info');
-    $('#dining_room').removeClass('room_info');
-    $('#kitchen').removeClass('room_info');
-    console.log('yes');
-  }
-
-  var diningRoom = function(){
-    $('#living_room').removeClass('room_info');
-    $('#bedroom').removeClass('room_info');
-    $('#dining_room').addClass('room_info');
-    $('#kitchen').removeClass('room_info');
-    console.log('yes');
-  }
-
-  var kitchen = function(){
-    $('#living_room').removeClass('room_info');
-    $('#bedroom').removeClass('room_info');
-    $('#dining_room').removeClass('room_info');
-    $('#kitchen').addClass('room_info');
-    console.log('yes');
+    signIN();
   }
 
   var loginCommands = {
@@ -79,60 +47,37 @@ if (annyang) {
     'register': register,
     'sign in': welcome,
   };
-
-  var userCommands = {
-    'living room': livingRoom,
-    'bedroom': bedRoom,
-    'dining room': diningRoom,
-    'kitchen': kitchen,
-  };
   
   annyang.addCommands(loginCommands);
-  annyang.addCommands(userCommands);
   
   annyang.start();
 
 }
 
-
-$('#contacts-form').submit(function(e){
-    e.preventDefault();
-    var formData = $("#contacts-form").serialize();
-
-    $.ajax({
-      type: "POST",
-      url: 'database.json',
-      data: formData,
-      success: function(data) {
-        console.log(data);
+function signIN(){
+  var formData = $('.custom-form').serializeArray();
+    console.log(formData);
+    console.log(formData[0].value);
+    console.log(formData[1].value);
+    $.getJSON('database.json', function(data){
+    $.each(data, function(i, user){
+      console.log(user.login + ' ' +user.password);
+      $('#no_user').text(" ");
+      if(user.login == formData[0].value && user.password == formData[1].value){
+        location.href = 'welcome.html';
+        $('#no_user').text(" ");
       }
-  })
+      else{
+        $('#no_user').text("uncorrect login or password");
+      }
+      })
+    });
+}
+
+
+$('.custom-form').submit(function(e){
+    e.preventDefault();
+    signIN();
 });
 
-$('#living_room').hover(function(){
-    $('#living_room').addClass('room_info');
-    $('#bedroom').removeClass('room_info');
-    $('#dining_room').removeClass('room_info');
-    $('#kitchen').removeClass('room_info');
-});
-
-$('#bedroom').hover(function(){
-    $('#living_room').removeClass('room_info');
-    $('#bedroom').addClass('room_info');
-    $('#dining_room').removeClass('room_info');
-    $('#kitchen').removeClass('room_info');
-});
-
-$('#dining_room').hover(function(){
-    $('#living_room').removeClass('room_info');
-    $('#bedroom').removeClass('room_info');
-    $('#dining_room').addClass('room_info');
-    $('#kitchen').removeClass('room_info');
-});
-
-$('#kitchen').hover(function(){
-    $('#living_room').removeClass('room_info');
-    $('#bedroom').removeClass('room_info');
-    $('#dining_room').removeClass('room_info');
-    $('#kitchen').addClass('room_info');
-});
+  

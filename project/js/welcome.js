@@ -36,6 +36,7 @@ if (annyang) {
 
   var showLiving = function(){
     livingRoom();
+    $(".living_room_eye input").prop( "checked", true );
     window.scrollTo(0,0);
     $('.lRoom-modal').addClass('modal-room-show');
     $('.lRoom-modal > .modal-content').addClass('modal-content-show');
@@ -45,6 +46,7 @@ if (annyang) {
 
   var showDining = function(){
     diningRoom();
+    $(".dining_room_eye input").prop( "checked", true );
     window.scrollTo(0,0);
     $('.diningRoom-modal').addClass('modal-room-show');
     $('.diningRoom-modal > .modal-content').addClass('modal-content-show');
@@ -54,6 +56,7 @@ if (annyang) {
 
   var showBedroom = function(){
     bedRoom();
+    $(".bedroom_eye input").prop( "checked", true );
     window.scrollTo(0,0);
     $('.bedroom-modal').addClass('modal-room-show');
     $('.bedroom-modal > .modal-content').addClass('modal-content-show');
@@ -63,6 +66,7 @@ if (annyang) {
 
   var showKitchen = function(){
     kitchen();
+    $(".kitchen_eye input").prop( "checked", true );
     window.scrollTo(0,0);
     $('.kitchen-modal').addClass('modal-room-show');
     $('.kitchen-modal > .modal-content').addClass('modal-content-show');
@@ -71,6 +75,10 @@ if (annyang) {
   }
 
    var close = function(){
+    $(".living_room_eye input").prop( "checked", false );
+    $(".bedroom_eye input").prop( "checked", false );
+    $(".dining_room_eye input").prop( "checked", false );
+    $(".kitchen_eye input").prop( "checked", false );
     $('.modal-room').removeClass('modal-room-show');
     $('.modal-room > .modal-content').removeClass('modal-content-show');
     $('.modal-room > .modal-content > .modal-header').removeClass('modal-header-show');
@@ -245,6 +253,26 @@ if (annyang) {
     location.href = 'tel:104';
   }
 
+  var shRooms = function(){
+    $('.modal').fadeIn();
+    $('body').css({'overflow-y':'hidden'});  
+  }
+
+  var owl = $('.owl-carousel');
+
+  var nextPhoto = function(){
+    owl.trigger('next.owl');
+  }
+
+   var prevPhoto = function(){
+    owl.trigger('prev.owl');
+  }
+
+  var closeRooms = function(){
+    $('.modal').fadeOut();
+    $('body').css({'overflow-y':'visible'});  
+  }
+
   var userCommands = {
     'living room': livingRoom,
     'bedroom': bedRoom,
@@ -292,7 +320,11 @@ if (annyang) {
     'police': police,
     'ambulance': ambulance,
     'gas service': gas,
-    'go to rooms': rooms
+    'go to rooms': rooms,
+    'show rooms': shRooms,
+    'next photo': nextPhoto,
+    'previous photo': prevPhoto,
+    'close view': closeRooms
   };
 
   annyang.addCommands(userCommands);
@@ -310,7 +342,15 @@ $('.living_room_button').click(function(){
   showLiving();
 });
 
+$('.living_room_eye input').click(function(){
+  showLiving();
+})
+
 $('.dining_room_button').click(function(){
+  showDining();
+});
+
+$('.dining_room_eye input').click(function(){
   showDining();
 });
 
@@ -318,7 +358,15 @@ $('.bedroom_button').click(function(){
   showBedroom();
 });
 
+$('.bedroom_eye input').click(function(){
+  showBedroom();
+});
+
 $('.kitchen_button').click(function(){
+  showKitchen();
+});
+
+$('.kitchen_eye input').click(function(){
   showKitchen();
 });
 
@@ -364,10 +412,10 @@ function startTime()
   var s = tm.getSeconds();
   m=checkTime(m);
   s=checkTime(s);
-  if (day != 10){
+  if (day < 10){
     day = "0" + day;
   }
-  if (month != 10){
+  if (month < 10){
     month = "0" + month;
   }
   document.getElementById('date').innerHTML=day+"."+month+"."+year;
@@ -407,3 +455,35 @@ weather();
 $('.go_admin').click(function(){
   showAdmin();
 });
+
+
+owl.owlCarousel({
+    loop:true,
+    nav:false,
+    dots:false,
+    responsive:{
+        0:{
+            items:1
+        }
+    }
+});
+
+var modal = document.getElementById('modal');
+window.onclick = function(event) {
+    if (event.target == modal) {
+      $('.modal').fadeOut();
+      $('body').css({'overflow-y':'visible'});  
+      return false;
+    }
+}
+
+$('.room-show').click(function(){
+  $('.modal').fadeIn();
+  $('body').css({'overflow-y':'hidden'});  
+})
+
+$('.go_to_rooms').click(function(){
+  $('.welcome_home').fadeIn();
+  $('.admin_panel').fadeOut();
+})
+
