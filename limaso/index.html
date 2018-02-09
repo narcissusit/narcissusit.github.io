@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>Limaso</title>
+	<link rel="stylesheet" href="styles/noUIslider/nouislider.min.css">
+	<link rel="stylesheet" href="styles/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+</head>
+<body>
+	<header id="header">
+		<a href="#" class="logo"></a>
+		<nav class="main-menu" id="main-menu">
+			<ul class="main-menu-list">
+				<li class="main-menu-item">
+					<a href="#" class="main-menu-link">Ткани для интерьера</a>
+				</li>
+				<li class="main-menu-item">
+					<a href="#" class="main-menu-link">Домашний текстиль</a>
+				</li>
+				<li class="main-menu-item">
+					<a href="#" class="main-menu-link">Коллекции из текстиля</a>
+				</li>
+				<li class="main-menu-item">
+					<a href="#" class="main-menu-link">Ресторанный текстиль</a>
+				</li>
+				<li class="main-menu-item">
+					<a href="#" class="main-menu-link">Отельный текстиль</a>
+				</li>
+			</ul>
+		</nav>
+		<div class="header-icons">
+			<a href="#" class="user-link search-icon"></a>
+			<a href="#" class="user-link user-icon"></a>
+			<div class="basket-header">
+				<a href="#" class="user-link basket-icon"></a>
+				<span class="basket-count">1</span>
+			</div>
+			<div class="menu-icon" id="menu-icon">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</div>
+	</header>
+	<section class="show-design">
+		<div class="wrapper">
+			<div class="show-design-inner">
+				<h2 class="show-design-title">
+					Изысканный дизайн
+					<span class="show-design-title-inner">теплых покрывал</span>
+				</h2>
+				<p class="show-design-title-description">
+					Смотрите и выбирайте, который вам по душе
+				</p>
+				<button id="show-button" class="show-design-button">Смотреть</button>
+			</div>
+		</div>
+	</section>
+	<section class="products-section">
+		<div class="wrapper">
+			<ul class="bread-crumbs">
+				<li class="bread-crumbs-item">
+					<a href="#" class="bread-crumbs-link">Главная</a>
+				</li>
+				<li class="bread-crumbs-item">
+					<a href="#" class="bread-crumbs-link">Каталог</a>
+				</li>
+				<li class="bread-crumbs-item">
+					<a href="#" class="bread-crumbs-link active-link">Покрывала</a>
+				</li>
+			</ul>
+			<div class="products-block">
+				<div class="mobile-filter" id="mobile-filter">
+					<p>Фильтр</p>
+				</div>
+				<aside class="categories-filter" id="categories-filter">
+					<div class="categories">
+						<h3 class="categories-title">
+							Категории
+						</h3>
+						<div class="category-acc">
+							<span class="category-name">
+								Домашний текстиль
+							</span>
+							<ul class="category-types">
+								<li class="category-item">
+									<a href="#" class="category-link">
+										Гобеленовые сумки
+									</a>
+								</li>
+								<li class="category-item">
+									<a href="#" class="category-link">
+										Скатерти
+									</a>
+								</li>
+								<li class="category-item">
+									<a href="#" class="category-link">
+										Пледы
+									</a>
+								</li>
+								<li class="category-item">
+									<a href="#" class="category-link">
+										Полотенца
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="category-acc">
+							<span class="category-name">
+								Ткани для интерьера
+							</span>
+							<ul class="category-types">
+								<li class="category-item">
+									<a href="#" class="category-link">
+										Шелк
+									</a>
+								</li>
+								<li class="category-item">
+									<a href="#" class="category-link">
+										Вязка
+									</a>
+								</li>
+								<li class="category-item">
+									<a href="#" class="category-link">
+										Атлас
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="category-acc">
+							<span class="category-name">
+								Коллекции из текстиля
+							</span>
+							<ul class="category-types">
+								<li class="category-item">
+									<a href="#" class="category-link">
+										PLG03
+									</a>
+								</li>
+								<li class="category-item">
+									<a href="#" class="category-link">
+										KI5
+									</a>
+								</li>
+								<li class="category-item">
+									<a href="#" class="category-link">
+										MJG02
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="categories">
+						<h3 class="categories-title">
+							Цена
+						</h3>
+						<div id="price-slider" class="price-slider"></div>
+						<div class="price-values">
+							<input type="text" id="min-price" class="show-price" readonly>
+							<span class="price-sign">></span>
+							<input type="text" id="max-price" class="show-price" readonly>
+						</div>
+					</div>
+				</aside>
+				<div class="products">
+					<div class="products-sort">
+						<select class="sort-select" id="sort-select">
+							<option class="sort-item" selected disabled>
+								Сортировать по
+							</option>
+							<option class="sort-item" id="up-price">
+								цена по возрастанию
+							</option>
+							<option class="sort-item" id="down-price">
+								цена по убыванию
+							</option>
+						</select>
+					</div>
+					<div class="products-store">
+						<div class="product new" data-price="170">
+							<div class="product-image">
+								<img src="images/plaid_cell.jpg" alt="Plaid Cell">
+							</div>
+							<div class="product-desciption">
+								<div class="product-info">
+									<h4 class="product-name">Плед "Клеточка" LT1070</h4>
+									<p class="product-price">170.00грн</p>
+								</div>
+								<button class="product-basket"></button>
+							</div>
+						</div>
+						<div class="product" data-price="5846">
+							<div class="product-image">
+								<img src="images/cover-PL03.png" alt="Cover PL03">
+							</div>
+							<div class="product-desciption">
+								<div class="product-info">
+									<h4 class="product-name">Покрывало PL03</h4>
+									<p class="product-price">5846.00грн</p>
+								</div>
+								<button class="product-basket"></button>
+							</div>
+						</div>
+						<div class="product" data-price="170">
+							<div class="product-image">
+								<img src="images/cover-PLG03.png" alt="Cover PLG03">
+							</div>
+							<div class="product-desciption">
+								<div class="product-info">
+									<h4 class="product-name">Покрывало гобеленовое PLG03</h4>
+									<p class="product-price">170.00грн</p>
+								</div>
+								<button class="product-basket"></button>
+							</div>
+						</div>
+						<div class="product" data-price="5846">
+							<div class="product-image">
+								<img src="images/cover-PL03.png" alt="Cover PL03">
+							</div>
+							<div class="product-desciption">
+								<div class="product-info">
+									<h4 class="product-name">Покрывало PL03</h4>
+									<p class="product-price">5846.00грн</p>
+								</div>
+								<button class="product-basket"></button>
+							</div>
+						</div>
+						<div class="product" data-price="170">
+							<div class="product-image">
+								<img src="images/cover-PLG03.png" alt="Cover PLG03">
+							</div>
+							<div class="product-desciption">
+								<div class="product-info">
+									<h4 class="product-name">Покрывало гобеленовое PLG03</h4>
+									<p class="product-price">170.00грн</p>
+								</div>
+								<button class="product-basket"></button>
+							</div>
+						</div>
+						<div class="product new" data-price="170">
+							<div class="product-image">
+								<img src="images/plaid_cell.jpg" alt="Plaid Cell">
+							</div>
+							<div class="product-desciption">
+								<div class="product-info">
+									<h4 class="product-name">Плед "Клеточка" LT1070</h4>
+									<p class="product-price">170.00грн</p>
+								</div>
+								<button class="product-basket"></button>
+							</div>
+						</div>
+						<div class="product" data-price="5846">
+							<div class="product-image">
+								<img src="images/cover-PL03.png" alt="Cover PL03">
+							</div>
+							<div class="product-desciption">
+								<div class="product-info">
+									<h4 class="product-name">Покрывало PL03</h4>
+									<p class="product-price">5846.00грн</p>
+								</div>
+								<button class="product-basket"></button>
+							</div>
+						</div>
+						<div class="product new" data-price="170">
+							<div class="product-image">
+								<img src="images/plaid_cell.jpg" alt="Plaid Cell">
+							</div>
+							<div class="product-desciption">
+								<div class="product-info">
+									<h4 class="product-name">Плед "Клеточка" LT1070</h4>
+									<p class="product-price">170.00грн</p>
+								</div>
+								<button class="product-basket"></button>
+							</div>
+						</div>
+						<div class="product" data-price="170">
+							<div class="product-image">
+								<img src="images/cover-PLG03.png" alt="Cover PLG03">
+							</div>
+							<div class="product-desciption">
+								<div class="product-info">
+									<h4 class="product-name">Покрывало гобеленовое PLG03</h4>
+									<p class="product-price">170.00грн</p>
+								</div>
+								<button class="product-basket"></button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer>
+		<div class="footer-main">
+			<div class="wrapper">
+				<span class="footer-logo"></span>
+				<div class="footer-menus-block">
+					<div class="footer-info">
+						<h4 class="footer-info-title">
+							Контакты
+						</h4>
+						<ul class="footer-contacts-list">
+							<li class="contacts-item contacts-adress">
+								<span>г.Львов, Кольцевая дорога</span>
+								<span>с.Зымна Вода, ул.Яворовская,22
+								</span>
+								<span>ТЦ "Три слона. Все для дома"</span>
+							</li>
+							<li class="contacts-item contacts-phone">
+								<a href="tel:" class="contact-link">
+									+38(067)6742021;
+								</a>
+								<a href="tel:" class="contact-link">
+									+38(068)6745417
+								</a>
+							</li>
+						</ul>
+						<div class="footer-pay-systems">
+							<a href="#" class="pay visa"></a>
+							<a href="#" class="pay mastercard"></a>
+							<a href="#" class="pay paypal"></a>
+						</div>
+					</div>
+					<div class="footer-info">
+						<h4 class="footer-info-title">
+							Магазин
+						</h4>
+						<ul class="footer-menu">
+							<li class="footer-menu-item">
+								<a href="#" class="footer-menu-link">
+									Акции
+								</a>
+							</li>
+							<li class="footer-menu-item">
+								<a href="#" class="footer-menu-link">
+									О нас
+								</a>
+							</li>
+							<li class="footer-menu-item">
+								<a href="#" class="footer-menu-link">
+									Доставка
+								</a>
+							</li>
+							<li class="footer-menu-item">
+								<a href="#" class="footer-menu-link">
+									Политика безопасности
+								</a>
+							</li>
+							<li class="footer-menu-item">
+								<a href="#" class="footer-menu-link">
+									Услуги
+								</a>
+							</li>
+							<li class="footer-menu-item">
+								<a href="#" class="footer-menu-link">
+									Возврат товара
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer-info">
+						<h4 class="footer-info-title">
+							Клиентам
+						</h4>
+						<ul class="footer-menu">
+							<li class="footer-menu-item">
+								<a href="#" class="footer-menu-link">
+									Личный кабинет
+								</a>
+							</li>
+							<li class="footer-menu-item">
+								<a href="#" class="footer-menu-link">
+									История заказов
+								</a>
+							</li>
+							<li class="footer-menu-item">
+								<a href="#" class="footer-menu-link">
+									Закладки
+								</a>
+							</li>
+							<li class="footer-menu-item">
+								<a href="#" class="footer-menu-link">
+									Рассылка
+								</a>
+							</li>
+							<li class="footer-menu-item">
+								<a href="#" class="footer-menu-link">
+									Партнерская программа
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer-info">
+						<h4 class="footer-info-title">
+							Дополнительно
+						</h4>
+						<ul class="footer-menu">
+							<li class="footer-menu-item">
+								<a href="#" class="footer-menu-link">
+									Производители
+								</a>
+							</li>
+							<li class="footer-menu-item">
+								<a href="#" class="footer-menu-link">
+									Подарочные сертификаты
+								</a>
+							</li>
+							<li class="footer-menu-item">
+								<a href="#" class="footer-menu-link">
+									Скидки и распродажи
+								</a>
+							</li>
+							<li class="footer-menu-item">
+								<a href="#" class="footer-menu-link">
+									Карта сайта
+								</a>
+							</li>
+							<li class="footer-menu-item">
+								<a href="#" class="footer-menu-link">
+									Связаться с нами
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer-copy">
+			<div class="wrapper">
+				<span class="copyright">
+					LIMASO &copy; 2017. Все права защищены.
+				</span>
+				<div class="social-networks">
+					<a href="#" class="facebook"></a>
+					<a href="#" class="twitter"></a>
+					<a href="#" class="rss"></a>
+					<a href="#" class="gmail"></a>
+					<a href="#" class="linkedin"></a>
+				</div>
+			</div>		
+		</div>
+	</footer>
+
+	<div class="modal-space" id="modal-card">
+		<div class="modal" id="modal-card-content">
+			<button class="close-modal"></button>
+			<h3 class="modal-title">Данные банковской карты</h3>
+			<form class="bank-card-form">
+				<div class="bank-card">
+					<div class="card-number-block">
+						<label for="card-number" class="card-field-name">Номер карты</label>
+						<input type="number" class="card-number-input card-field" id="card-number"  max="9999" required>
+						<input type="number" class="card-number-input card-field"  max="9999" required>
+						<input type="number" class="card-number-input card-field"  max="9999" required>
+						<input type="number" class="card-number-input card-field"  max="9999" required>
+					</div>
+					<div class="date-block">
+						<label class="card-field-name">Срок действия</label>
+						<div class="date-selection">
+							<select id="month-card" class="card-field"></select>
+							<select id="year-card" class="card-field"></select>
+						</div>
+					</div>
+					<div class="user-card">
+						<input type="text" id="user-card-name" class="card-field user-card-name" placeholder="Держатель карты">
+					</div>
+				</div>
+				<div class="bank-card back-card-side">
+					<div class="cvv-block">
+						<label for="cvv" class="card-field-name">Код CVV2 / CVC2</label>
+						<input type="number" id="cvv" class="cvv-input card-field">
+					</div>
+				</div>
+				<button class="card-pay" id="card-pay">Оплатить</button>
+			</form>
+		</div>
+	</div>
+
+	<div class="modal-space" id="modal-ajax">
+		<div class="modal" id="modal-ajax-content">
+			<button class="close-modal"></button>
+			<div class="modal-ajax-title"></div>
+		</div>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="js/noUIslider/nouislider.min.js"></script>
+	<script src="js/products-filters.js"></script>
+	<script src="js/modal.js"></script>
+	<script src="js/card.js"></script>
+	<script src="js/getJSON.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
