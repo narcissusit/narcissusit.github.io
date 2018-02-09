@@ -1,5 +1,5 @@
 
-$.getJSON('../text.json', function(data){
+$.getJSON('../limaso/text.json', function(data){
 
 	$.each(data, function(i, info){
 		var title = '<h2 class="modal-title">'+info.title+'</h2>';
